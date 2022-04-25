@@ -1,5 +1,8 @@
+
+{% load static %}
 <nav class="navbar">
-    <div class="company_title">Östanbäcks generationsbyggen</div>
+    <a href="{% url 'index' %}"><img class="logo" src="{% static 'images/logo.jpg' %}" alt=""></a>
+    <!--<div class="company_title">Östanbäcks generationsbyggen</div>-->
     <a href="#" class="toggle-button">
         <span class="bar"></span>
         <span class="bar"></span>

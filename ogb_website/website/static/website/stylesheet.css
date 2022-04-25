@@ -11,21 +11,23 @@ body{
 .navbar{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-}
-
-.company_title{
-    font-size: 1.5rem;
-    margin: .5rem;
-
+    align-items:center;
+    background-color: white;
+    height: 150px;
+    color: black;
+    font-weight: bolder;
+    font-size: 25px;
 }
 
 .navbar-links ul{
     margin: 0;
     padding: 0;
     display: flex;
+    float: none;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .navbar-links li{
@@ -34,8 +36,8 @@ body{
 }
 .navbar-links li a{
     text-decoration: none;
-    color: white;
-    padding: 1rem;
+    color: black;
+    padding: 20px;
     display: block;
 }
 .navbar-links li:hover{
@@ -59,6 +61,16 @@ body{
     background-color: white;
     border-radius: 10px;
 }
+
+.logo{
+    position:absolute;
+    top:20px; 
+    left:20px;
+    width:180px;
+    height:180px;
+    overflow:hidden;
+}
+
 
 @media only screen and (max-width: 800px){
     .toggle-button{
