@@ -1,0 +1,22 @@
+{% load static %}
+<nav class="navbar">
+    <a href="{% url 'index' %}"><img class="logo" src="{% static 'images/logotype.png' %}" alt=""></a>
+    <label class="toggle">
+        <i class="fa fa-bars"></i>
+    </label>
+    <div class="navbar-links">
+        <ul>
+            <li><a href="{% url 'index' %}">Hem</a></li>
+            <li><a href="{% url 'about' %}">Om oss</a></li>
+            <li><a href="{% url 'contact' %}">Kontakt</a></li>
+            <li><a href="{% url 'references' %}">Tidigare projekt</a></li>
+        </ul>
+        <div class="socialmedia">
+            <div class="social-top">
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+           
+        </div>
+       
+    </div>
+</nav>

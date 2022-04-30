@@ -1,13 +1,18 @@
-
 {% load static %}
+<header class="header">
 <nav class="navbar">
-    <a href="{% url 'index' %}"><img class="logo" src="{% static 'images/logo.jpg' %}" alt=""></a>
-    <!--<div class="company_title">Östanbäcks generationsbyggen</div>-->
-    <a href="#" class="toggle-button">
+   <div class="company-logo">
+        <a href="{% url 'index' %}"><img class="logo" src="{% static 'images/logo-transparent.gif' %}" alt=""></a>
+   </div>
+ <!--    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+    </label> -->
+<!--  <a href="#" class="toggle-bar">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
-    </a>
+    </a>  -->
     <div class="navbar-links">
         <ul>
             <li><a href="{% url 'index' %}">Hem</a></li>
@@ -15,5 +20,15 @@
             <li><a href="{% url 'contact' %}">Kontakt</a></li>
             <li><a href="{% url 'references' %}">Tidigare projekt</a></li>
         </ul>
-    </div>
+    </div> 
 </nav>
+
+<!-- <div class="nav-right">
+<a href="#"><i class="fa fa-instagram"></i></a>
+</div> -->
+
+<a href="#"><i class="fa fa-instagram" style="float: right; cursor: pointer; color: black; margin: 20px 60px 20px; font-size: 24px;"></i></a>
+ 
+
+</header>
+ 
