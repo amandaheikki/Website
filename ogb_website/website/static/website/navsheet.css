@@ -1,126 +1,120 @@
 
-
-.header{
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 8rem;
-    background-color: rgba(255, 255, 255, 0.651);
-    z-index: 1;
-    transition: 0.5s;
-
-}
-
-.header.scroll{
-    position: fixed;
-    top: -8rem;
-    left:0;
-    width: 100%;
-    height: 8rem;
-    background-color: rgba(255, 255, 255, 0.651);
-    z-index: 1;
-    transition: 0.5s;
-
-} 
-
 .logo{
-    position:absolute;
-    left: -25%;
-    bottom: -4.5rem; 
-   
-    width:250px;
-    height:250px;
-
-    
+    height: 160px;
+    padding: 20px 20px;
+    margin-left: -150px;
+     
 }
 
 .navbar{
-   position: absolute;
-   left: 30%;
-   bottom: 1rem;
-   width: 100%;
- 
-}
-
-.navbar ul{
-    padding: 10px;
-    width: 30%;
-    list-style: none;
+    background: #111;
+    color: white;
     display: flex;
     justify-content: space-around;
-    text-align: center;
-
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    height: 150px;
+    
 }
 
-.navbar ul li {
+.nav-list{
+    list-style-type: none;
+   
+    
+}
+
+ .nav-list .list-item{
     display: inline-block;
+    padding: 20px 10px;
+   
+} 
 
-}
-
-.navbar ul li a{
+.navbar a{
+    color: var(--white);
     text-decoration: none;
-    color: black;
     text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 18px;
-
-}
-.navbar ul li a:hover{
-    text-decoration: underline;
-    
+    padding: 10px 25px;
 }
 
-.navbar ul li a::after{
-content: '';
-display: block;
-width: 0;
-height: 1px;
-background-color: transparent;
-transition: width 0.3s;
-}
 
-.navbar ul li a:hover::after{
-    width: 100%;
-    transition: width 0.3s;
-}
+.navbar a:hover{
+    cursor: pointer;
+} 
 
-.welcome{
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    background-color: transparent;
-    height: 100vh;
-    width: 100%;
-    
+.toggle-bar{
+    display: none;
 }
-
-.welcome-container{
-    position: absolute;
-    top: 30%;
-    left: 10%; 
-    width: 50%;
-    font-weight: bolder;
-}
-
-h1{
-    margin-bottom: 1rem;
-}
-
-.welcome-two{
-    position: absolute;
-    top: 100vh;
-    left: 0;
-    height: 100vh;
-    width: 100%;
+.bar{
+    width: 30px;
+    height: 4px;
     background-color: white;
+    margin-bottom: 4px;
 }
 
-.checkbtn{
-    font-size: 30px;
-    color: black;
+@media all and (max-width: 767px){
+    .navbar{
+        flex-direction: column;
+        position: relative;
+    }
+
+    .toggle-bar{
+        display: block;
+        position: absolute;
+        right: 15px;
+        top:15px
+    }
+
+    .logo{
+     
+        padding: 20px 20px;
+        padding: 20px 20px;
+        margin-left: 0;
+         
+       
+    }
+
+    .toggle-bar:hover{
+        cursor: pointer;
+    }
+
+    .nav-list{
+        list-style-type: none;
+        width: 100%;
+        background-color: var(--blue);
+        text-align: center;
+        padding-top: 10px;
+        display: none;
+    }
+
+    .nav-list .list-item:hover{
+        background-color: #c7cdd45b;
+       
+     
+    } 
+
+    .nav-list .list-item a:hover{
+        color: var(--brown);
+    }
+
+    .nav-list .list-item {
+        display: block;
+        padding: 10px;
+        padding: 10px;
+   
+       
+    }
+    .nav-list .list-item a{
+      
+        color: white;
+        
+       
+    }
+
+    .active{
+        display: block;
+    }
 }
-
-
 
 
