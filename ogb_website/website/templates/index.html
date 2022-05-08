@@ -1,5 +1,21 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
+<main>
+   
+    <div class="main-container">
+        <div class="index heading-title">
+         <h2>Kompetens & trygghet i generationer</h2> 
+      
+        </div>
+        <div class="index heading-text">
+            <h1>Vi bygger och renoverar för framtiden</h1>
+            <a href="{% url 'references' %}" type="button" class="reference-button">Referensjobb</a>
+        </div>
+        <div class="index heading-img">
+            <!-- <img class="heading-image" src="{% static 'images/ex.jpg' %}"> -->
+        </div>
+    </div>
 
+</main>
 {% endblock content %}
