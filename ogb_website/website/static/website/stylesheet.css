@@ -15,95 +15,279 @@
 
     /*Fonts*/
   /*   font-family: 'Poppins', sans-serif;   */
-   /*  font-family: 'Raleway', sans-serif; */
-   font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif; 
+ /*   font-family: 'Maven Pro', sans-serif; */
 
  
 }
 
-body{
-     display: flex;
+/* body{
+
+    display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: center; 
     min-height: 100vh;
-    flex-direction: column; 
-    background: white;
+     flex-direction: column;  
+    background: white; 
     
-}
+} */
+
 main{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; 
    
 } 
 
 /*All css for index.html main*/
 .main-container{
-    
-   /*  position: relative; */
+
     width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    background:url("/static/images/testt.jpg"); 
-    height: 400px;
-    background-position: bottom;
-    align-items: left;
-    padding: 100px 100px;
+    background:url("/static/images/forrest.jpg");  
+   /*  background: black; */
+   background-position: 25% 75%;
+    height: 600px;
+  /*   background-position: bottom; */
+    align-items: center;
+   
 }
 
+.heading-title{
 
-.index h1{
+   background-color: #3e4f62b0;
+   border-radius: 5px;
+   margin-top: 8%;
+   padding: 20px;
+}
 
-    padding: 10px;
+#h1-heading{
+
+    padding: 15px;
     color: white;
+    font-size: 42px;
     font-weight: 900;
-    
-
-}
-
-
-.index h2{
-  
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: 600;
+    position: relative;
     text-transform: uppercase;
+    
+}
+
+
+#h2-heading{
+
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 15px;
+    left:25%;
 
 }
 
+#h2-heading::before{
+
+    content: '';
+    position: absolute;
+    bottom: 18px;
+    left:-30px;
+    width: 30px;
+    height: 4px;
+    background: var(--darkerbrown);
+
+}
+
+
+.button-wrapper{
+
+    display: table;
+    margin: 0 auto;
+  
+}
 .reference-button{
 
-    display: inline-block;
     width: 170px;
-    height: 40px;
+    height: 40px; 
     background: var(--darkerbrown);
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-right: 10px;
+    align-items: center; 
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
-    text-align: center;
+    margin-top: 8%;
+   
 }
 
 .reference-button:hover{
     background-color: var(--brown);
 }
-/* .index h2::before{
-    content: '';
-    position: absolute;
-    top: 135px;
-    width: 150px;
-    height: 3px;
-    background: var(--darkerbrown);
+
+
+
+#work-h1{
+
+    margin-top: 10%;
+    text-align: center;
+    font-size: 36px;
+    padding: 20px;
+}
+
+.work-container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 600px;
+  
+}
+
+.work-container > div{
+    max-width: 350px;
+    padding: 35px;
+}
+
+.insta-feed{
+   
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    align-items: center;
+    min-height: 600px;
+    gap:15px;
+    padding: 20px;
+ 
+}
+
+.insta-feed > div{
+
+    background: white;
+    height: 270px;
+    width: 250px;
+    display: table;
+    margin: 0 auto;
+
+}
+
+#insta-h1{
     
-}  */ 
+    color: white;
+    text-align: center;
+    font-size: 36px;
+    padding: 20px;
+}
+
+.job-estimate{
+   
+    background: var(--beige);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+    height: 600px;
+}
+
+
+.job-estimate h1{
+    text-align: center;
+    font-size: 36px;
+    padding: 20px;
+
+}
+
+.job-form{
+  padding: 20px;
+}
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+  }
+
+input[type=submit]{
+
+    display: table;
+    margin: 0 auto;
+    margin-top:2%;
+    width: 170px;
+    height: 40px; 
+    background: var(--darkerbrown);
+    border: none;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+input[type=submit]:hover{
+    background-color: var(--brown);
+}
+
+@media all and (max-width: 767px){
+
+    .heading-title{
+        margin-top:30%;
+        text-align: center;
+        align-items: center;
+    }
+    #h1-heading{
+        font-size: 20px;
+        
+    }
+    #h2-heading{
+
+        font-size: 14px;
+        margin-top: -5%;
+        left: auto;
+  
+    }
+    
+    #h2-heading::before{
+    display: none;
+
+    }
+    .button-wrapper{
+    
+        display: table;
+        margin: 0 auto
+    }
+    .reference-button{
+
+        width: 120px;
+        height: 30px; 
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .job-estimate h1{
+        font-size: 24px;
+    }
+
+    .job-estimate p{
+        font-size: 14px;
+        margin-left: 15%;
+    }
+
+    
+
+
+
+}
 
 
   

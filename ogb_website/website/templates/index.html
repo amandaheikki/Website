@@ -2,20 +2,77 @@
 {% load static %}
 {% block content %}
 <main>
-   
+   <section>
     <div class="main-container">
-        <div class="index heading-title">
-         <h2>Kompetens & trygghet i generationer</h2> 
-      
+        <div class="heading-title">
+            <h1 id="h1-heading">Östanbäcks generationsbyggen</h1>
+         <h2 id="h2-heading">Kompetens & trygghet i generationer</h2> 
+     <div class="button-wrapper">
+         <a href="{% url 'references' %}" type="button" class="reference-button">Referensjobb</a>
+    </div>
+    </div>
+    </div>
+</section>
+
+<!--Section with quick facts about company-->
+<section>
+    <h1 id="work-h1">Din snickare i Gävle</h1>
+    <div class="work-container">
+        <div>
+        <p> Sed iaculis arcu sit amet egestas pulvinar.
+            Etiam magna orci, facilisis ut sapien id, ornare volutpat justo. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br><br>
+            Pellentesque ut vulputate enim. Nunc neque enim, vehicula sed lectus
+            vitae, euismod posuere velit. Vivamus felis ante, pretium et orci vel,
+            ornare consectetur nunc. Nullam congue ante vel dolor lacinia</p>
         </div>
-        <div class="index heading-text">
-            <h1>Vi bygger och renoverar för framtiden</h1>
-            <a href="{% url 'references' %}" type="button" class="reference-button">Referensjobb</a>
+        <div>
+        <p> Sed iaculis arcu sit amet egestas pulvinar.
+            Etiam magna orci, facilisis ut sapien id, ornare volutpat justo. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br><br>
+            Pellentesque ut vulputate enim. Nunc neque enim, vehicula sed lectus
+            vitae, euismod posuere velit. Vivamus felis ante, pretium et orci vel,
+            ornare consectetur nunc. Nullam congue ante vel dolor lacinia</p>
         </div>
-        <div class="index heading-img">
-            <!-- <img class="heading-image" src="{% static 'images/ex.jpg' %}"> -->
         </div>
     </div>
+</section>
 
+<!--Section with companys instagram-feed-->
+<section>
+    <div class="insta-feed">
+        <h1 id="insta-h1">Följ vårt arbete</h1>
+        <div>IMG</div>
+    </div>
+</section>
+
+<!--Section with job-estimate form-->
+<section>
+    <div class="job-estimate">
+        <div class="job-form">
+       <form action="" method="get">
+           
+           
+                <h1>Kontakta oss inför ditt nästa projekt!</h1>
+                <p>Fyll i formuläret nedan så återkommer vi inom kort.</p><br>
+                Namn
+                <input type="text" class="field" placeholder="Namn">
+                Email
+                <input type="text" class="field" placeholder="Mejladress">
+                Mobilnummer
+                <input type="text" class="field" placeholder="Mobilnummer">
+                Meddelande
+                <textarea id="subject" name="subject" placeholder="Meddelande"></textarea>
+                <input id type="submit" value="Skicka meddelande">
+
+            
+       
+    </form>
+</div>
+
+    </div>
+</section>
 </main>
 {% endblock content %}

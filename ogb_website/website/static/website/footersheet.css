@@ -9,13 +9,13 @@ footer{
     color: white;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+
+    
 }
 
 footer .footer-container{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     flex-direction: row;
 }
 
@@ -139,14 +139,16 @@ footer .footer-container .about.about-us{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
   
- 
- 
 }
 
 
 @media all and (max-width: 767px){
+
+    .footer-container{
+      font-size: 12px;
+    }
     footer .footer-container{
-        flex-direction: column;
+        flex-direction: column; 
     }
     footer{
         padding: 40px;
@@ -159,7 +161,7 @@ footer .footer-container .about.about-us{
 
     footer .footer-container .about .about.about-us, .links, .contact{
         width: 100%;
-    }
+    } 
 
     .copyright {
         padding: 5px 30px;
