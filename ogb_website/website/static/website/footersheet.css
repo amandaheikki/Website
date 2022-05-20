@@ -141,7 +141,15 @@ footer .footer-container .about.about-us{
   
 }
 
+#login{
 
+    margin-right: 0px;
+    text-align: right;
+    color: white;
+}
+#login:hover{
+    text-decoration: underline;
+}
 @media all and (max-width: 767px){
 
     .footer-container{
