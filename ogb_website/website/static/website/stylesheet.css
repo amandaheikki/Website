@@ -44,6 +44,7 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
+    /*Ska kunna ändras som admin*/
     background:url("/static/images/forrest.jpg");  
    /*  background: black; */
    background-position: 25% 75%;
@@ -156,23 +157,19 @@ main{
     background-color: var(--blue);
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;  
     align-items: center;
-    min-height: 600px;
+   
     gap:15px;
     padding: 20px;
  
 }
 
-.insta-feed > div{
-
-    background: white;
-    height: 270px;
-    width: 250px;
-    display: table;
-    margin: 0 auto;
-
+.insta-div{
+    padding: 30px;
 }
+
+
 
 #insta-h1{
     
@@ -180,6 +177,7 @@ main{
     text-align: center;
     font-size: 36px;
     padding: 20px;
+
 }
 
 .job-estimate{
@@ -198,22 +196,44 @@ main{
 .job-estimate h1{
     text-align: center;
     font-size: 36px;
-    padding: 20px;
+    padding: 40px;
 
 }
+
 
 .job-form{
-  padding: 20px;
+  padding: 40px;
+  align-items: center;
+  text-align: center; 
 }
+
+
+
 input[type=text], select, textarea {
-    width: 100%; 
+    width: 80%; 
     padding: 12px;
+    align-items: center;
     border: 1px solid #ccc; 
     border-radius: 4px; 
     box-sizing: border-box; 
     margin-top: 6px; 
     margin-bottom: 16px; 
     resize: vertical;
+    font-family:'Raleway', sans-serif; 
+    outline: none;
+  }
+  input[type=email], select, textarea {
+    width: 80%; 
+    padding: 12px;
+    align-items: center;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+    font-family:'Raleway', sans-serif; 
+    outline: none;
   }
 
 input[type=submit]{
@@ -221,7 +241,7 @@ input[type=submit]{
     display: table;
     margin: 0 auto;
     margin-top:2%;
-    width: 170px;
+    width: 130px;
     height: 40px; 
     background: var(--darkerbrown);
     border: none;
@@ -237,6 +257,8 @@ input[type=submit]:hover{
     background-color: var(--brown);
 }
 
+
+ 
 @media all and (max-width: 767px){
 
     .heading-title{

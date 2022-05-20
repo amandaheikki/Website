@@ -17,6 +17,7 @@
 <!--Section with quick facts about company-->
 <section>
     <h1 id="work-h1">Din snickare i Gävle</h1>
+    <!--p element i work-container ska kunna ändras som admin-->
     <div class="work-container">
         <div>
         <p> Sed iaculis arcu sit amet egestas pulvinar.
@@ -44,35 +45,35 @@
 <section>
     <div class="insta-feed">
         <h1 id="insta-h1">Följ vårt arbete</h1>
-        <div>IMG</div>
+        <div data-behold-id="E1JHsZKAxeEz9OLkfvDI" class="insta-div"></div>
+        <script src="https://widgets.behold.so/ig.js" defer></script>
     </div>
+  
 </section>
 
 <!--Section with job-estimate form-->
 <section>
     <div class="job-estimate">
         <div class="job-form">
-       <form action="" method="get">
-           
-           
+            <!--Funkar när webbsidan ligger på en server!-->
+            <!--https://formsubmit.co/amandaheikki@hotmail.com-->
+     <form id="contact-form" action="https://formsubmit.co/amandaheikki@hotmail.com" method="POST"> 
+        {% csrf_token %}
                 <h1>Kontakta oss inför ditt nästa projekt!</h1>
-                <p>Fyll i formuläret nedan så återkommer vi inom kort.</p><br>
-                Namn
-                <input type="text" class="field" placeholder="Namn">
-                Email
-                <input type="text" class="field" placeholder="Mejladress">
-                Mobilnummer
-                <input type="text" class="field" placeholder="Mobilnummer">
-                Meddelande
-                <textarea id="subject" name="subject" placeholder="Meddelande"></textarea>
-                <input id type="submit" value="Skicka meddelande">
-
-            
-       
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" class="field"  name="name" placeholder="Namn" required>
+                <input type="email" class="field" name="mail" placeholder="Mejladress" required>
+                <input type="text" class="field" name="phone" placeholder="Mobilnummer">
+                <textarea id="message" name="message" placeholder="Meddelande" re></textarea>
+                <!-- <label for="addFile">Bifoga bild</label>
+                <input type="file" id="addFile" name="addFile" multiple> -->
+              <input type="submit" value="Skicka" id="submit"> 
     </form>
-</div>
+       </div>
 
     </div>
+
 </section>
+
 </main>
 {% endblock content %}
