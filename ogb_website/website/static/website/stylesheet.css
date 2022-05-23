@@ -44,12 +44,9 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
-    /*Ska kunna ändras som admin*/
     background:url("/static/images/forrest.jpg");  
-   /*  background: black; */
-   background-position: 25% 75%;
+    background-position: 25% 75%;
     height: 600px;
-  /*   background-position: bottom; */
     align-items: center;
    
 }
@@ -128,6 +125,25 @@ main{
     background-color: var(--brown);
 }
 
+.updates-btn{
+    display: table;
+    margin: 0 auto;
+    margin-top:2%;
+    width: 130px;
+    height: 40px; 
+    background: var(--darkerbrown);
+    border: none;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.updates-btn:hover{
+    background-color: var(--brown);
+}
 
 
 #work-h1{
@@ -138,16 +154,18 @@ main{
     padding: 20px;
 }
 
-.work-container{
+.about-container{
 
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 600px;
+    flex-direction: column;
+    min-height: 600px;
+    align-items: center;
   
 }
 
-.work-container > div{
+.about-container > div{
+    text-align: center;
+    justify-content: center;
     max-width: 350px;
     padding: 35px;
 }

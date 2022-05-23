@@ -16,15 +16,19 @@
 
 <!--Section with quick facts about company-->
 <section>
-    <h1 id="work-h1">Din snickare i Gävle</h1>
-    <!--p element i work-container ska kunna ändras som admin-->
-    <div class="work-container">
+    <div class="about-container">
     {% for x in obj %}
-  <h2>{{x.title}}</h2>
-  <br>
-  <p>{{x.content}}</p>
-  <a href="{% url 'update' x.id %}" class="button">Ändra</a>
-  
+    <div>
+    <h1>{{x.title}}</h1>
+    </div>
+    <div>
+    <p>{{x.content}}</p>
+    </div>
+    <div>
+        {% if user.is_authenticated %}
+        <button class="updates-btn"><a href="{% url 'update' x.id %}">Uppdatera</a></button>
+        {% endif %}
+    </div>
     {% endfor %}
    
     </div>

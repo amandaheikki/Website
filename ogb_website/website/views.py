@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render, HttpResponseRedirect
-
 from .models import StartInfo
 from .form import updateStartPage
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -11,6 +11,7 @@ def startpage_items(request):
     return render(request, "index.html", {"obj":obj})
 
 
+@login_required
 def startpage_update(request, id):
     obj=get_object_or_404(StartInfo, id=id)
     if request.method == "POST":
