@@ -1,6 +1,15 @@
 import imp
 from django.contrib import admin
-from .models import StartInfo
 
-# Register your models here.
-admin.site.register(StartInfo)
+from .models import *
+
+#Register your models here.
+
+myModels = [StartInfo, FooterAbout]
+admin.site.register(myModels)
+
+
+#from .models import StartInfo, FooterAbout
+#admin.site.register(StartInfo)
+#admin.site.register(FooterAbout)
+
