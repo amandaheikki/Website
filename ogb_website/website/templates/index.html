@@ -19,25 +19,14 @@
     <h1 id="work-h1">Din snickare i Gävle</h1>
     <!--p element i work-container ska kunna ändras som admin-->
     <div class="work-container">
-        <div>
-        <p> Sed iaculis arcu sit amet egestas pulvinar.
-            Etiam magna orci, facilisis ut sapien id, ornare volutpat justo. 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            <br><br>
-            Pellentesque ut vulputate enim. Nunc neque enim, vehicula sed lectus
-            vitae, euismod posuere velit. Vivamus felis ante, pretium et orci vel,
-            ornare consectetur nunc. Nullam congue ante vel dolor lacinia</p>
-        </div>
-        <div>
-        <p> Sed iaculis arcu sit amet egestas pulvinar.
-            Etiam magna orci, facilisis ut sapien id, ornare volutpat justo. 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            <br><br>
-            Pellentesque ut vulputate enim. Nunc neque enim, vehicula sed lectus
-            vitae, euismod posuere velit. Vivamus felis ante, pretium et orci vel,
-            ornare consectetur nunc. Nullam congue ante vel dolor lacinia</p>
-        </div>
-        </div>
+    {% for x in obj %}
+  <h2>{{x.title}}</h2>
+  <br>
+  <p>{{x.content}}</p>
+  <a href="{% url 'update' x.id %}" class="button">Ändra</a>
+  
+    {% endfor %}
+   
     </div>
 </section>
 

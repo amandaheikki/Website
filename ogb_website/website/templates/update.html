@@ -1,0 +1,14 @@
+<!--Section with quick facts about company-->
+<section>
+    <h1 id="work-h1">Din snickare i Gävle</h1>
+    <!--p element i work-container ska kunna ändras som admin-->
+    <div class="work-container">
+      <form method="post">
+          {% csrf_token %}
+          {{form.as_p}}
+          <button type="submit">Bekräfta ändringar</button>
+
+      </form>
+ 
+    </div>
+</section>
