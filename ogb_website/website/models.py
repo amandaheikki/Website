@@ -9,6 +9,9 @@ class StartPage(models.Model):
     contact = models.TextField()
     about = models.TextField()
     services = models.TextField()
+    about_img = models.ImageField(null=True, blank=True)
+    contact_img = models.ImageField(null=True, blank=True)
+    services_img = models.ImageField(null=True, blank=True)
     def __str__(self):
         return self.title
 

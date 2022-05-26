@@ -1,9 +1,10 @@
 {% load static %}
 
 <h1>Uppdatera startsida</h1>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
      {% csrf_token %}
-      {{form.as_p}}
+    <!--  {{form.media}} -->
+     {{form.as_p}}
       <hr>
      <button class="updates-btn" type="submit">Bekräfta ändringar</button>
 </form>

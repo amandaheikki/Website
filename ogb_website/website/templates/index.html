@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
+
 <main>
    <section>
     <div class="main-container">
@@ -54,7 +56,9 @@
   <div class="bottom-links">
     {% for y in obj %}
       <div>
-          <a href="{% url 'about' %}"><img src="{% static 'images/woodwork1.jpg' %}" alt="" class="bottom-images"></a>
+        {% if y.about_img %}
+          <a href="{% url 'about' %}"><img src="{{ y.about_img }}" alt="" class="bottom-images"></a>
+          {% endif%}
         <div>
           <p class="bottom-p-toplink"><a href="{% url 'about' %}">Om oss</a></p>
           <p>{{y.about}}</p>
@@ -67,7 +71,7 @@
         </div>
       </div>
       <div>
-        <a href="{% url 'contact' %}"><img src="{% static 'images/woodwork2.jpg' %}"  alt=""  class="bottom-images"></a>
+        <a href="{% url 'contact' %}"><img src="{{y.contact_img}}"  alt=""  class="bottom-images"></a>
         <div>
           <p class="bottom-p-toplink"><a href="{% url 'contact' %}">Kontakt</a></p>
           <p>{{y.contact}}</p>
@@ -80,7 +84,7 @@
         </div>
       </div>
       <div>
-          <a href="{% url 'services' %}"><img src="{% static 'images/woodwork3.jpg' %}"  alt=""  class="bottom-images"></a>
+          <a href="{% url 'services' %}"><img src="{{y.services_img}}"  alt=""  class="bottom-images"></a>
         <div>
           <p class="bottom-p-toplink"><a href="{% url 'services' %}">Tjänster</a></p>
           <p>{{y.services}}</p>

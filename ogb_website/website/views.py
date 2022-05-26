@@ -33,7 +33,7 @@ def startpage_content(request):
 def startpage_contentupd1(request, id):
     obj=get_object_or_404(StartPage, id=id)
     if request.method == "POST":
-        form=updateStartPageContent1(request.POST, instance=obj)
+        form=updateStartPageContent1(request.POST, request.FILES, instance=obj)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect("/")
@@ -45,25 +45,25 @@ def startpage_contentupd1(request, id):
 def startpage_contentupd2(request, id):
     obj=get_object_or_404(StartPage, id=id)
     if request.method == "POST":
-        form=updateStartPageContent2(request.POST, instance=obj)
+        form=updateStartPageContent2(request.POST,request.FILES, instance=obj)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect("/")
     else:
         form=updateStartPageContent2()
-    return render(request, "updatecontent.html",{"form":form})  
+    return render(request, "updatecontent2.html",{"form":form})  
 
 @login_required
 def startpage_contentupd3(request, id):
     obj=get_object_or_404(StartPage, id=id)
     if request.method == "POST":
-        form=updateStartPageContent3(request.POST, instance=obj)
+        form=updateStartPageContent3(request.POST, request.FILES, instance=obj)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect("/")
     else:
         form=updateStartPageContent3()
-    return render(request, "updatecontent.html",{"form":form}) 
+    return render(request, "updatecontent3.html",{"form":form}) 
 
 
 #def index(request):
