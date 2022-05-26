@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render, HttpResponseRedirect
-from .models import FooterAbout, StartInfo
-from .form import updateStartPage, updateFooter
+from .models import StartInfo
+from .form import updateStartPage
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -23,22 +23,7 @@ def startpage_update(request, id):
         form=updateStartPage()
     return render(request, "update.html",{"form":form})    
     
-#Update footer info
-def footer_item(request):
-    footerobj=FooterAbout.objects.all()
-    return render(request, "footer.html", {"footerobj":footerobj})
 
-@login_required
-def footer_update(request, id):
-    footerobj=get_object_or_404(FooterAbout, id=id)
-    if request.method == "POST":
-        form=updateFooter(request.POST, instance=footerobj)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect("/")
-    else:
-        form=updateFooter()
-    return render(request, "update_footer.html", {"form":form})  
 
 #def index(request):
  #   return render(request, 'index.html', {})
