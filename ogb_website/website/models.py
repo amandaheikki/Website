@@ -9,7 +9,3 @@ class StartInfo(models.Model):
     def __str__(self):
         return self.title
 
-class FooterAbout(models.Model):
-    infotext = models.TextField()
-    def __str__(self):
-        return self.infotext
