@@ -50,34 +50,54 @@
 </section>
 
 <section>
+
   <div class="bottom-links">
+    {% for y in obj %}
       <div>
           <a href="{% url 'about' %}"><img src="{% static 'images/woodwork1.jpg' %}" alt="" class="bottom-images"></a>
         <div>
           <p class="bottom-p-toplink"><a href="{% url 'about' %}">Om oss</a></p>
-          <p>Här kan du läsa mer om oss på Östanbäcks generationsbyggen!</p>
+          <p>{{y.about}}</p>
           <p class="bottom-p-link"><a href="{% url 'about' %}">Läs mer</a></p>
+          <div>
+            {% if user.is_authenticated %}
+            <button class="updates-btn"><a href="{% url 'updatecontent' y.id %}">Uppdatera</a></button>
+            {% endif %}
+        </div>
         </div>
       </div>
       <div>
         <a href="{% url 'contact' %}"><img src="{% static 'images/woodwork2.jpg' %}"  alt=""  class="bottom-images"></a>
         <div>
           <p class="bottom-p-toplink"><a href="{% url 'contact' %}">Kontakt</a></p>
-          <p>Kontakta gärna oss genom formuläret eller ring för vidare frågor.</p>
+          <p>{{y.contact}}</p>
           <p class="bottom-p-link"><a href="{% url 'contact' %}">Läs mer</a></p>
+          <div>
+            {% if user.is_authenticated %}
+            <button class="updates-btn"><a href="{% url 'updatecontent2' y.id %}">Uppdatera</a></button>
+            {% endif %}
+        </div>
         </div>
       </div>
       <div>
           <a href="{% url 'services' %}"><img src="{% static 'images/woodwork3.jpg' %}"  alt=""  class="bottom-images"></a>
         <div>
           <p class="bottom-p-toplink"><a href="{% url 'services' %}">Tjänster</a></p>
-          <p>Läs mer om vad vi jobbar med och vilka tjänster vi kan erbjuda dig.</p>
+          <p>{{y.services}}</p>
           <p class="bottom-p-link"><a href="{% url 'services' %}">Läs mer</a></p>
         </div>
+        <div>
+          {% if user.is_authenticated %}
+          <button class="updates-btn"><a href="{% url 'updatecontent3' y.id %}">Uppdatera</a></button>
+          {% endif %}
       </div>
-    </div>
+
+      </div>
+      {% endfor %}
+</div>
+  
   </section>
-</section>
+
 
 <section>
     <div class="space">

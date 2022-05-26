@@ -1,0 +1,9 @@
+{% load static %}
+
+<h1>Uppdatera startsida</h1>
+<form method="post">
+     {% csrf_token %}
+      {{form.as_p}}
+      <hr>
+     <button class="updates-btn" type="submit">Bekräfta ändringar</button>
+</form>

@@ -5,7 +5,7 @@ from .models import *
 
 #Register your models here.
 
-myModels = [StartInfo]
+myModels = [StartPage]
 admin.site.register(myModels)
 
 

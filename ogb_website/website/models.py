@@ -3,9 +3,12 @@ from django.db import models
 
 # Create your models here.
 
-class StartInfo(models.Model):
+class StartPage(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
+    contact = models.TextField()
+    about = models.TextField()
+    services = models.TextField()
     def __str__(self):
         return self.title
 

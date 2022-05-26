@@ -1,19 +1,20 @@
 from django.shortcuts import get_object_or_404, render, HttpResponseRedirect
-from .models import StartInfo
-from .form import updateStartPage
+from .models import StartPage
+from .form import updateStartPage, updateStartPageContent1, updateStartPageContent2, updateStartPageContent3
 from django.contrib.auth.decorators import login_required
+from .form import *
 
 # Create your views here.
 
 # All updates for index/startpage
 def startpage_items(request):
-    obj=StartInfo.objects.all()
+    obj=StartPage.objects.all()
     return render(request, "index.html", {"obj":obj})
 
 
 @login_required
 def startpage_update(request, id):
-    obj=get_object_or_404(StartInfo, id=id)
+    obj=get_object_or_404(StartPage, id=id)
     if request.method == "POST":
         form=updateStartPage(request.POST, instance=obj)
         if form.is_valid():
@@ -22,7 +23,47 @@ def startpage_update(request, id):
     else:
         form=updateStartPage()
     return render(request, "update.html",{"form":form})    
-    
+
+
+def startpage_content(request):
+    obj=StartPage.objects.all()
+    return render(request, "index.html", {"obj":obj})
+
+@login_required
+def startpage_contentupd1(request, id):
+    obj=get_object_or_404(StartPage, id=id)
+    if request.method == "POST":
+        form=updateStartPageContent1(request.POST, instance=obj)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/")
+    else:
+        form=updateStartPageContent1()
+    return render(request, "updatecontent.html",{"form":form})  
+
+@login_required
+def startpage_contentupd2(request, id):
+    obj=get_object_or_404(StartPage, id=id)
+    if request.method == "POST":
+        form=updateStartPageContent2(request.POST, instance=obj)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/")
+    else:
+        form=updateStartPageContent2()
+    return render(request, "updatecontent.html",{"form":form})  
+
+@login_required
+def startpage_contentupd3(request, id):
+    obj=get_object_or_404(StartPage, id=id)
+    if request.method == "POST":
+        form=updateStartPageContent3(request.POST, instance=obj)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/")
+    else:
+        form=updateStartPageContent3()
+    return render(request, "updatecontent.html",{"form":form}) 
 
 
 #def index(request):
