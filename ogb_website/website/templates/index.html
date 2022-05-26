@@ -71,7 +71,9 @@
         </div>
       </div>
       <div>
+        {% if y.contact_img %}
         <a href="{% url 'contact' %}"><img src="{{y.contact_img}}"  alt=""  class="bottom-images"></a>
+        {% endif %}
         <div>
           <p class="bottom-p-toplink"><a href="{% url 'contact' %}">Kontakt</a></p>
           <p>{{y.contact}}</p>
@@ -84,7 +86,9 @@
         </div>
       </div>
       <div>
+        {% if y.services_img %}
           <a href="{% url 'services' %}"><img src="{{y.services_img}}"  alt=""  class="bottom-images"></a>
+        {% endif %}
         <div>
           <p class="bottom-p-toplink"><a href="{% url 'services' %}">Tjänster</a></p>
           <p>{{y.services}}</p>
