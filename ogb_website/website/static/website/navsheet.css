@@ -4,8 +4,7 @@
 .logo{
     height: 120px;
     padding: 5px 5px;
-
-     
+  
 }
 
 nav{
@@ -45,6 +44,8 @@ nav a:hover{
     cursor: pointer;
     color: var(--darkerbrown);
 } 
+
+
 
 .toggle-bar{
     display: none;

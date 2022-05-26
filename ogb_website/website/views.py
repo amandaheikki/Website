@@ -54,3 +54,9 @@ def contact(request):
 
 def faq(request):
     return render(request, 'faq.html', {})
+
+def services(request):
+    return render(request, 'services.html', {})    
+
+def estimate(request):
+    return render(request, 'estimate.html', {})    

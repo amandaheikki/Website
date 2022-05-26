@@ -8,7 +8,7 @@
             <h1 id="h1-heading">Östanbäcks generationsbyggen</h1>
          <h2 id="h2-heading">Kompetens & trygghet i generationer</h2> 
      <div class="button-wrapper">
-         <a href="{% url 'references' %}" type="button" class="reference-button">Referensjobb</a>
+         <a href="{% url 'references' %}" type="button" class="reference-button">Tidigare projekt</a>
     </div>
     </div>
     </div>
@@ -21,8 +21,9 @@
     <div>
     <h1>{{x.title}}</h1>
     </div>
+    <a href="{% url 'index' %}"><img class="main-logo" src="{% static 'images/logo-small.png' %}" alt=""></a>
     <div>
-    <p>{{x.content}}</p>
+    <p class="about-p-top">{{x.content}}</p>
     </div>
     <div>
         {% if user.is_authenticated %}
@@ -30,7 +31,6 @@
         {% endif %}
     </div>
     {% endfor %}
-   
     </div>
 </section>
 
@@ -44,6 +44,46 @@
   
 </section>
 
+<section>
+    <div class="space">
+    </div>
+</section>
+
+<section>
+  <div class="bottom-links">
+      <div>
+          <a href="{% url 'about' %}"><img src="{% static 'images/woodwork1.jpg' %}" alt="" class="bottom-images"></a>
+        <div>
+          <p class="bottom-p-toplink"><a href="{% url 'about' %}">Om oss</a></p>
+          <p>Här kan du läsa mer om oss på Östanbäcks generationsbyggen!</p>
+          <p class="bottom-p-link"><a href="{% url 'about' %}">Läs mer</a></p>
+        </div>
+      </div>
+      <div>
+        <a href="{% url 'contact' %}"><img src="{% static 'images/woodwork2.jpg' %}"  alt=""  class="bottom-images"></a>
+        <div>
+          <p class="bottom-p-toplink"><a href="{% url 'contact' %}">Kontakt</a></p>
+          <p>Kontakta gärna oss genom formuläret eller ring för vidare frågor.</p>
+          <p class="bottom-p-link"><a href="{% url 'contact' %}">Läs mer</a></p>
+        </div>
+      </div>
+      <div>
+          <a href="{% url 'services' %}"><img src="{% static 'images/woodwork3.jpg' %}"  alt=""  class="bottom-images"></a>
+        <div>
+          <p class="bottom-p-toplink"><a href="{% url 'services' %}">Tjänster</a></p>
+          <p>Läs mer om vad vi jobbar med och vilka tjänster vi kan erbjuda dig.</p>
+          <p class="bottom-p-link"><a href="{% url 'services' %}">Läs mer</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section>
+    <div class="space">
+    </div>
+</section>
+
 <!--Section with job-estimate form-->
 <section>
     <div class="job-estimate">
@@ -52,7 +92,8 @@
             <!--https://formsubmit.co/amandaheikki@hotmail.com-->
      <form id="contact-form" action="https://formsubmit.co/amandaheikki@hotmail.com" method="POST"> 
         {% csrf_token %}
-                <h1>Kontakta oss inför ditt nästa projekt!</h1>
+        <h1>Kontakta oss inför ditt nästa projekt!</h1>
+        <h2><span><i class="fa fa-phone" aria-hidden="true"></i></span>+46 73 824 91 44<h2> 
                 <input type="hidden" name="_captcha" value="false">
                 <input type="text" class="field"  name="name" placeholder="Namn" required>
                 <input type="email" class="field" name="mail" placeholder="Mejladress" required>
@@ -66,7 +107,9 @@
 
     </div>
 
+<section>
+    <div class="space">
+    </div>
 </section>
-
 </main>
 {% endblock content %}

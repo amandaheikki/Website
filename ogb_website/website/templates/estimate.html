@@ -7,7 +7,7 @@
 <section>
     <div class="links-header">
         <div>
-            <h1>Kontakta oss idag!</h1>
+            <h1>Offert</h1>
         </div>
     </div>
 </section>
@@ -20,7 +20,7 @@
 <section>
     <div class="contact-form">
         <div class="contact-inf">
-            <h2>Vi har många år inom branschen</h2>
+            <h2>Offert</h2>
             <img src="{% static 'images/woodwork1.jpg' %}" alt="" class="bottom-images">
             <p>Kontakta oss för frågor eller offerter så återkommer vi fortast möjliga!</p>
         </div>
@@ -33,10 +33,12 @@
                 <input type="text" class="field"  name="name" placeholder="Namn" required>
                 <input type="email" class="field" name="mail" placeholder="Mejladress" required>
                 <input type="text" class="field" name="phone" placeholder="Mobilnummer">
-                <textarea id="message" name="message" placeholder="Meddelande" re></textarea>
-                <!-- <label for="addFile">Bifoga bild</label>
-                <input type="file" id="addFile" name="addFile" multiple> -->
-              <input type="submit" value="Skicka" id="submit"> 
+                <textarea id="message" name="message" placeholder="Meddelande" required></textarea><br>
+              
+                <input type="file" id="file-button" multiple/>
+   
+              
+                <input type="submit" value="Skicka" id="submit"> 
     </form>
     </div>
 
