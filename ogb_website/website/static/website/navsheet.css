@@ -14,6 +14,7 @@ nav{
     justify-content: space-around;
     align-items:center;
     width: 100%;
+    
  
 } 
 
@@ -47,79 +48,86 @@ nav a:hover{
 
 
 
-.toggle-bar{
+@media (max-width: 768px){
+
+
+.nav-list{
+    display: none;
+
+}
+
+.nav-list.toggleCls{
+    display: block;
+}
+
+.hamIcon{
+    font-size: 26px;
+    font-weight: 900;
+    margin-left: 27rem;
+    margin-top: -105px;
+    padding-bottom: 60px;
+}
+
+.hamIcon:hover{
+    cursor: pointer;
+}
+
+nav{
+    flex-direction: column;
+    position: relative;
+}
+
+
+
+.logo{
+    padding: 5px 5px;
+    margin-left: 0;  
+  
+}
+
+
+.nav-list{
+    list-style-type: none;
+    width: 100%;
+    background-color: var(--blue);
+    text-align: center;
+    padding-top: 10px;
     display: none;
 }
-.bar{
-    width: 30px;
-    height: 4px;
-    background-color: var(--blue);
-    margin-bottom: 4px;
+
+.nav-list .list-item:hover{
+    background-color: #c7cdd45b;
+   
+ 
+} 
+
+.nav-list .list-item a:hover{
+    color: var(--brown);
 }
 
+.nav-list .list-item {
+    display: block;
+    padding: 10px;
+    padding: 10px;
 
+   
+}
+.nav-list .list-item a{
+  
+    color: white;
+    
+   
+}
 
-@media all and (max-width: 767px){
-    nav{
-        flex-direction: column;
-        position: relative;
-    }
+}
 
-    .toggle-bar{
-        display: block;
-        position: absolute;
-        right: 15px;
-        top:15px
-    }
-
-
-    .logo{
-        padding: 5px 5px;
-        margin-left: 0;  
-      
-    }
-
-    .toggle-bar:hover{
-        cursor: pointer;
-        
-    }
-
-    .nav-list{
-        list-style-type: none;
-        width: 100%;
-        background-color: var(--blue);
-        text-align: center;
-        padding-top: 10px;
+@media(min-width: 769px){
+    .hamIcon{
         display: none;
     }
 
-    .nav-list .list-item:hover{
-        background-color: #c7cdd45b;
-       
-     
-    } 
-
-    .nav-list .list-item a:hover{
-        color: var(--brown);
-    }
-
-    .nav-list .list-item {
-        display: block;
-        padding: 10px;
-        padding: 10px;
-   
-       
-    }
-    .nav-list .list-item a{
-      
-        color: white;
-        
-       
-    }
-
-    .active{
-        display: block;
+    .nav-list{
+        display: initial;
     }
 }
-
-
+   

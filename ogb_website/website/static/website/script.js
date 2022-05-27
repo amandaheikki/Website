@@ -1,16 +1,10 @@
 
 /* Creates a function that hides/displays the menu within a hamburger icon*/
+function toggleClass(){
+  let menu = document.querySelector(".nav-list");
+  menu.classList.toggle("toggleCls");
+}
 
-const toggleBtn = document.getElementById('toggle-btn');
-const navigationLst = document.getElementById('navigation-list');
+let hamburger = document.querySelector(".ham-Icon");
 
-toggleBtn.addEventListener('click', () =>{
-  navigationLst.classList.toggle('active');
-})
-
-
-
-
-/* document.querySelectorAll('a[href="'+document.URL+'"]').forEach(function(elem){elem.className += 'current-link'});
- */
-
+hamburger.addEventListener("click", toggleClass);
