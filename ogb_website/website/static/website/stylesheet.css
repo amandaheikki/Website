@@ -308,6 +308,7 @@ input[type=submit]{
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
+   
 }
 
 input[type=submit]:hover{
@@ -443,7 +444,7 @@ input[type=submit]:hover{
     display: flex;
     flex-direction: row;
     background:url("/static/images/header.jpg");   
-    background-position: bottom; 
+    background-position:right; 
     opacity: 0.8; 
     height: 200px;
     align-items: center;
@@ -478,7 +479,7 @@ input[type=submit]:hover{
     background-color: var(--blue);
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: center;
     width: 100%;
     height: 100%;
     padding: 20px 100px;
@@ -506,26 +507,28 @@ input[type=submit]:hover{
     text-align: center;
     width: 70%;
 }
-.contact-inf{
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-   width: 100%;
-  
-} 
-
-.contact-inf h2{
-    padding: 10px;
-    text-align: center;
  
-      
+
+
+/* label {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+   
 }
-.contact-inf  p{
-    padding: 10px;
-    text-align: center;
-    width: 350px;
-      
-}
+ 
+ 
+ .files {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    margin-left: -250px;
+
+ } */
 
 
 
@@ -535,11 +538,7 @@ input[type=submit]:hover{
     width: 400px;
     opacity: 0.7;
     border-radius: 2px;
-  
 }
-
-
-
 
 
 .bottom-images{
@@ -548,9 +547,81 @@ input[type=submit]:hover{
     border-radius: 2px;
 }
 
+.aboutus-start{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.aboutus-start h2{
+    padding: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 32px;
+   
+
+}
+
+.aboutus-start h3{
+    padding: 10px;
+    max-width: 40%;
+    font-weight:400;
+}
 
 
-@media all and (max-width: 990px){
+
+
+.container{
+    width: 100%;
+    min-height: 1000px;
+    text-align: center;
+ 
+
+
+
+}
+
+.aboutus > div{
+    width: 100%;
+    height: 500px;
+   
+
+}
+
+.aboutus{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: var(--beige);
+  
+
+}
+
+.aboutus h4{
+    padding-top: 90px;
+ 
+}
+.aboutus p{
+    padding: 30px;
+    max-width: 70%;
+    margin-left: 8rem;
+ 
+
+}
+
+
+.about-images{
+    width:100%;
+    height: 500px;
+    opacity: 0.9;
+    -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(50%);
+    
+} 
+
+
+@media only screen and (max-width: 768px){
 
     .heading-title{
         margin-top:30%;
@@ -604,6 +675,14 @@ input[type=submit]:hover{
         width: 50%;
         margin: 6px 0;
       }
+
+   
+.aboutus{
+    flex-direction: column-reverse;
+}
+
+
+
 
 
 
