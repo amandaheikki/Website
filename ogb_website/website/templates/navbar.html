@@ -1,6 +1,6 @@
 {% load static %}
 <header>
-<nav>
+<nav id="navbar">
         <div class="company-logo">
             <a href="{% url 'index' %}"><img class="logo" src="{% static 'images/logo-small.png' %}" alt=""></a>
         </div>
@@ -8,19 +8,12 @@
             <h1>&#9776;</h1>
         </div>
             <ul class="nav-list">
-                <li class="list-item"><a href="{% url 'about' %}">Om oss</a></li>
+                <li class="list-item"><a href="{% url 'about' %}" >Om oss</a></li>
                 <li class="list-item"><a href="{% url 'contact' %}">Kontakt</a></li> 
                 <li class="list-item"><a href="{% url 'references' %}">Tidigare projekt</a></li>
                 <li class="list-item"><a href="{% url 'services' %}">Tjänster</a></li>
                 <li class="list-item"><a href="{% url 'estimate' %}">Offert</a></li> 
             </ul>
 
-          
-         <!--    <span class="hamburger" onclick="click" >|||</span> -->
-        <!--     <div class="toggle-bar" id="toggle-btn">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div> -->
  </nav>
 </header>

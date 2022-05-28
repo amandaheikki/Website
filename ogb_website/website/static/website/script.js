@@ -10,4 +10,3 @@ let hamburger = document.querySelector(".ham-Icon");
 hamburger.addEventListener("click", toggleClass);
 
 
-
