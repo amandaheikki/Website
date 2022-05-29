@@ -12,11 +12,16 @@
     </section>
     <section>
         <div class="aboutus-start">
-            <h2>Om oss</h2><br>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Aenean risus lorem, euismod sed volutpat non, ultricies nec est.
-                Aliquam mattis ligula a congue ornare.</h3>
+            {% for x in obj %}
+            <h2>{{x.title}}</h2><br>
+            <h3>{{x.topcontent}}</h3>
         </div>
+     <div>
+            {% if user.is_authenticated %}
+            <button class="updates-btn"><a href="{% url 'update_about1' x.id %}">Uppdatera</a></button>
+            {% endif %}
+        </div> 
+        {% endfor %}
     </section>
     <section>
         <div class="space2">
@@ -25,33 +30,42 @@
     <section>
         <div class="container">
         <div class="aboutus">
+            {% for y in obj %}
             <div>
-              <img src="{% static 'images/about1.jpg' %}" class="about-images">
+             {% if y.box1_img %}
+              <img src="{{ y.box1_img }}" class="about-images">
+              {% endif %}
             </div>
             <div>
-                <h4>Vilka är vi</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean risus lorem, euismod sed volutpat non, ultricies nec est.
-                    Aliquam mattis ligula a congue ornare.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean risus lorem, euismod sed volutpat non, ultricies nec est.
-                    Aliquam mattis ligula a congue ornare.</p>
+                <h4>{{y.box1Title}}</h4>
+                <p>{{y.box1Des}}</p>
+                <div>
+                    {% if user.is_authenticated %}
+                    <button class="updates-btn-about"><a href="{% url 'update_about2' y.id %}">Uppdatera</a></button>
+                    {% endif %}
+                </div> 
             </div>
+           
+            {% endfor %}
         </div>
         <div class="aboutus">
+            {% for y in obj %}
             <div>
-                <h4>Vad vi jobbar med</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean risus lorem, euismod sed volutpat non, ultricies nec est.
-                    Aliquam mattis ligula a congue ornare.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean risus lorem, euismod sed volutpat non, ultricies nec est.
-                    Aliquam mattis ligula a congue ornare.</p>
+                <h4>{{y.box2Title}}</h4>
+                <p>{{y.box2Des}}</p>
+                <div>
+                    {% if user.is_authenticated %}
+                    <button class="updates-btn-about"><a href="{% url 'update_about3' y.id %}">Uppdatera</a></button>
+                    {% endif %}
+                </div> 
             </div>
             <div>
-               <img src="{% static 'images/about2.jpg' %}" class="about-images"> 
-            </div>
-        
+                {% if y.box2_img %}
+                 <img src="{{ y.box2_img }}" class="about-images">
+                 {% endif %}
+               </div>
+           
+            {% endfor %}
         </div>
     </div>
     </section>

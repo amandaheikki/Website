@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render, HttpResponseRedirect
 from .models import StartPage
-from .form import updateStartPage, updateStartPageContent1, updateStartPageContent2, updateStartPageContent3
+from .form import updateStartPage, updateStartPageContent1, updateStartPageContent2, updateStartPageContent3, updateAboutPage, updateAboutContent1, updateAboutContent2
 from django.contrib.auth.decorators import login_required
 from .form import *
 
@@ -66,11 +66,55 @@ def startpage_contentupd3(request, id):
     return render(request, "updatecontent3.html",{"form":form}) 
 
 
+
+# All updates for about us page
+
+def aboutpage_items(request):
+    obj=AboutPage.objects.all()
+    return render(request, "about.html", {"obj":obj})
+
+@login_required
+def aboutpage_update(request, id):
+    obj=get_object_or_404(AboutPage, id=id)
+    if request.method == "POST":
+        form=updateAboutPage(request.POST, instance=obj)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/")
+    else:
+        form=updateAboutPage()
+    return render(request, "update_about1.html",{"form":form})    
+
+@login_required
+def aboutpage_updateBox1(request, id):
+    obj=get_object_or_404(AboutPage, id=id)
+    if request.method == "POST":
+        form=updateAboutContent1(request.POST, request.FILES, instance=obj)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/")
+    else:
+        form=updateAboutContent1()
+    return render(request, "update_about2.html",{"form":form})   
+
+@login_required
+def aboutpage_updateBox2(request, id):
+    obj=get_object_or_404(AboutPage, id=id)
+    if request.method == "POST":
+        form=updateAboutContent2(request.POST, request.FILES, instance=obj)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/")
+    else:
+        form=updateAboutContent2()
+    return render(request, "update_about3.html",{"form":form})  
+
+
 #def index(request):
  #   return render(request, 'index.html', {})
 
-def about(request):
-    return render(request, 'about.html', {})
+#def about(request):
+ #   return render(request, 'about.html', {})
 
 def references(request):
     return render(request, 'references.html', {})

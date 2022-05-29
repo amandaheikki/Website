@@ -33,7 +33,7 @@ footer .footer-container .about.about-us{
     font-weight: 500;
     margin-bottom: 15px;
 }
-
+/* 
 #h2-footer::before{
     content: '';
     position: absolute;
@@ -43,7 +43,7 @@ footer .footer-container .about.about-us{
     height: 2px;
     background: var(--darkerbrown);
 
-}
+} */
 
 
 .social{

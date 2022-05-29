@@ -23,14 +23,8 @@
     </div>
 </section>
 
-  <!--Section with job-estimate form-->
 <section>
     <div class="contact-form">
-        <div class="contact-inf">
-            <h2>Vi har många år inom branschen</h2>
-            <img src="{% static 'images/woodwork1.jpg' %}" alt="" class="bottom-images">
-            <p>Kontakta oss för frågor eller offerter så återkommer vi fortast möjliga!</p>
-        </div>
     <div>
      <form id="form" action="https://formsubmit.co/amandaheikki@hotmail.com" method="POST"> 
         {% csrf_token %}
@@ -40,7 +34,7 @@
                 <input type="text" class="field"  name="name" placeholder="Namn" required>
                 <input type="email" class="field" name="mail" placeholder="Mejladress" required>
                 <input type="text" class="field" name="phone" placeholder="Mobilnummer">
-                <textarea id="message" name="message" placeholder="Meddelande" re></textarea>
+                <textarea id="message" class="field" name="message" placeholder="Meddelande" re></textarea>
                 <!-- <label for="addFile">Bifoga bild</label>
                 <input type="file" id="addFile" name="addFile" multiple> -->
               <input type="submit" value="Skicka" id="submit"> 
@@ -50,6 +44,31 @@
     </div>
 
 </section>
+<section>
+    <div class="space2">
+    </div>
+</section>
+
+<!-- <section>
+    <div class="contact-info">
+        <div>
+            <h2>Vi utgår ifrån Gävle</h2>
+            <p>Vi utgår ifrån Östanbäck som ligger strax utanför Gävle.
+            Vi genomför jobb i Gävle och i närliggande orter!</p>
+        </div>
+    <div>
+        <h2>Hitta till oss</h2>
+        <ul class="info-li">
+
+            <ul class="service-lst">
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i>Östanbäcksvägen 67 818 92 Valbo</li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+0738249144">+46 73 824 91 44</a></li>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:ostanback@mail.com">ostanback@mail.com</a></li>
+         
+        </ul>
+        </div>
+    </div>
+</section> -->
 <section>
     <div class="space2">
     </div>
