@@ -23,7 +23,15 @@ footer .footer-container .about{
 }
 
 footer .footer-container .about.about-us{
-    width: 40%;
+    width: 80%;
+}
+
+#p-about-us{
+    position: relative;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 15px;
+    width: 80%;
 }
 
 
@@ -33,17 +41,6 @@ footer .footer-container .about.about-us{
     font-weight: 500;
     margin-bottom: 15px;
 }
-/* 
-#h2-footer::before{
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left:0;
-    width: 50px;
-    height: 2px;
-    background: var(--darkerbrown);
-
-} */
 
 
 .social{
@@ -154,7 +151,7 @@ footer .footer-container .about.about-us{
     .footer-container{
       font-size: 12px;
     }
-    footer .footer-container{
+    footer .footer-container >div{
         flex-direction: column; 
     }
     footer{

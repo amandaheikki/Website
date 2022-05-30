@@ -13,9 +13,16 @@
 
     <section>
         <div class="aboutus-start">
-            <h2>Offertförfrågan</h2><br>
-            <h3>Bifoga gärna bilder så kan vi lättare bedöma omfattningen på projektet!</h3>
+            {% for x in obj %}
+            <h2>{{x.title}}</h2><br>
+            <h3>{{x.content}}</h3>
         </div>
+        <div>
+            {% if user.is_authenticated %}
+            <button class="updates-btn"><a href="{% url 'update_estimateheading' x.id %}">Uppdatera</a></button>
+            {% endif %}
+        </div> 
+        {% endfor %}
     </section>
     <section>
         <div class="space2">

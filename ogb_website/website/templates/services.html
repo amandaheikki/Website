@@ -9,10 +9,17 @@
     </section>
     
     <section>
-    <div class="aboutus-start">
-        <h2>Tjänster</h2><br>
-        <h3>Läs mer om vad vi jobbar med och vad vi kan erbjuda dig som kund!</h3>
-    </div>
+        <div class="aboutus-start">
+            {% for x in obj %}
+            <h2>{{x.title}}</h2><br>
+            <h3>{{x.topcontent}}</h3>
+        </div>
+        <div>
+            {% if user.is_authenticated %}
+            <button class="updates-btn"><a href="{% url 'update_serviceheading' x.id %}">Uppdatera</a></button>
+            {% endif %}
+        </div> 
+        {% endfor %}
     </section>
     <section>
         <div class="space2">
@@ -21,35 +28,41 @@
     <section>
         <div class="container">
         <div class="aboutus">
+            {% for y in obj %}
             <div>
-              <img src="{% static 'images/about1.jpg' %}" class="about-images">
+             {% if y.box1_img %}
+              <img src="{{ y.box1_img }}" class="about-images">
+              {% endif %}
             </div>
             <div>
-                <h4>Nedan följer några exempel på vad vi kan göra för dig:</h4>
+                <h4>{{y.box1Title}}</h4>
+                <p>{{y.box1Des}}</p>
+                <div>
+                    {% if user.is_authenticated %}
+                    <button class="updates-btn-about"><a href="{% url 'update_service1' y.id %}">Uppdatera</a></button>
+                    {% endif %}
+                </div> 
+            </div>
            
-                    <ul class="service-lst">
-                        <li><i class="fa fa-check" aria-hidden="true"></i>Ombyggnation</li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i>Tillbyggnader</li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i>Renoveringar</li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i>Takbyten</li>
-                        <li><i class="fa fa-check" aria-hidden="true"></i>Altanbyggen</li>
-                    </ul>
-            </div>
+            {% endfor %}
         </div>
         <div class="aboutus">
+            {% for y in obj %}
             <div>
-                <h4>Trygghet, kunskap och personlighet</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean risus lorem, euismod sed volutpat non, ultricies nec est.
-                    Aliquam mattis ligula a congue ornare.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean risus lorem, euismod sed volutpat non, ultricies nec est.
-                    Aliquam mattis ligula a congue ornare.</p>
+                <h4>{{y.box2Title}}</h4>
+                <p>{{y.box2Des}}</p>
+                <div>
+                    {% if user.is_authenticated %}
+                    <button class="updates-btn-about"><a href="{% url 'update_service2' y.id %}">Uppdatera</a></button>
+                    {% endif %}
+                </div> 
             </div>
             <div>
-               <img src="{% static 'images/about2.jpg' %}" class="about-images"> 
-            </div>
-        
+                {% if y.box2_img %}
+                 <img src="{{ y.box2_img }}" class="about-images">
+                 {% endif %}
+               </div>
+            {% endfor %}
         </div>
     </div>
     </section>

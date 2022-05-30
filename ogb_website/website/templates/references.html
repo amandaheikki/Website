@@ -23,25 +23,21 @@
   <div class="ref-gallery">
  
       <div>
-         <img src="{% static 'images/ref1.jpg' %}" alt="" class="bottom-images">
-         <p>Lorem ipsum dolor sit amet</p>
-
+        {% for x in images %}
+        <tr>
+          {% if x.image %}
+          <td><img src="{{ x.image.url }}}" alt="" class="bottom-images"></td>
+          {% else %}
+          <td>{{ x.description}}</td>
+          {% endif %}
+        </tr>
       </div>
       <div>
-        <img src="{% static 'images/ref2.jpg' %}"  alt=""  class="bottom-images">
-        <p>Lorem ipsum dolor sit amet</p>
-       
-      </div>
-      <div>
-  <img src="{% static 'images/ref3.jpg' %}"  alt=""  class="bottom-images">
-  <p>Lorem ipsum dolor sit amet</p>
-    
-      </div>
-     <div>
-        <img src="{% static 'images/ref4.jpg' %}"  alt=""  class="bottom-images">
-        <p>Lorem ipsum dolor sit amet</p>
-          
-     </div>
+        {% if user.is_authenticated %}
+        <button class="updates-btn"><a href="{% url 'add_ref_image' %}">Uppdatera</a></button>
+        {% endif %}
+        {% endfor %}
+    </div> 
     </div>
     <div class="ref-text">
       <ul class="insta-link">
@@ -50,7 +46,6 @@
         <span>För fler bilder följ oss på instagram också!</span> 
       </li>
       </ul>
-
     </span>
     </div>
   </section>

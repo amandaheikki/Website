@@ -12,12 +12,19 @@
         </div>
     </section>
 
-<section>
-    <div class="aboutus-start">
-        <h2>Kontakta oss</h2><br>
-        <h3>Kontakta oss gärna för frågor och funderingar<br>Vi återkommer så fort vi kan!<br></h3>
-    </div>
-</section>
+    <section>
+        <div class="aboutus-start">
+            {% for x in obj %}
+            <h2>{{x.title}}</h2><br>
+            <h3>{{x.content}}</h3>
+        </div>
+        <div>
+            {% if user.is_authenticated %}
+            <button class="updates-btn"><a href="{% url 'update_contactheading' x.id %}">Uppdatera</a></button>
+            {% endif %}
+        </div> 
+        {% endfor %}
+    </section>
 <section>
     <div class="space2">
     </div>
