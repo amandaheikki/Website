@@ -1,10 +1,10 @@
-from tkinter import E
 from django.shortcuts import get_object_or_404, redirect, render, HttpResponseRedirect
-from .models import StartModel, EstimateModel, ContactModel, AboutModel, ReferenceImage, ServiceModel
+from .models import StartModel, EstimateModel, ContactModel, AboutModel, ServiceModel, ReferenceModel
 from .form import updateStartPage, updateStartPageContent1, updateStartPageContent2, updateStartPageContent3, updateAboutPage, updateAboutContent1, updateAboutContent2, updateServiceHeading, updateServiceContent1, updateServiceContent2, updateEstimateHeading
 from django.contrib.auth.decorators import login_required
 from .form import *
 from django.contrib import messages
+from django.views.generic import CreateView, ListView
 
 # Create your views here.
 
@@ -188,6 +188,10 @@ def update_contactheading(request, id):
     else:
         form=updateContactHeading()
     return render(request, "update_contactheading.html",{"form":form})  
+#REFERENCES
+def addRefImage(request):
+    add_img=ReferenceModel.objects.all()
+    return render(request,"references.html",{"add_img":add_img})
 
 
 

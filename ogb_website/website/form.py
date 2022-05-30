@@ -1,6 +1,6 @@
 from dataclasses import fields
 from django import forms
-from .models import StartModel, AboutModel
+from .models import StartModel, AboutModel, ServiceModel, EstimateModel, ReferenceModel
 
 from .models import *
 
@@ -72,3 +72,4 @@ class updateContactHeading(forms.ModelForm):
         fields = ["title", "content"]
 
 #REFERENCES
+

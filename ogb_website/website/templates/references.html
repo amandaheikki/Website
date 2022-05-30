@@ -17,28 +17,24 @@
     <h3>Ta del av några av våra tidigare projekt</h3>
 </div>
 </section>
-
 <section>
- 
   <div class="ref-gallery">
- 
-      <div>
-        {% for x in images %}
-        <tr>
-          {% if x.image %}
-          <td><img src="{{ x.image.url }}}" alt="" class="bottom-images"></td>
-          {% else %}
-          <td>{{ x.description}}</td>
+    {% for x in add_img %}
+      <div class="box">
+       
+        <ul>
+          <li><img src="{{ x.image.url }}" alt="" class="ref-images"></li>
+          <li>{{ x.caption }}</li>
+          {% if user.is_authenticated %}
+          <li><button class="updates-btn">Uppdatera</button></li>
           {% endif %}
-        </tr>
-      </div>
-      <div>
-        {% if user.is_authenticated %}
-        <button class="updates-btn"><a href="{% url 'add_ref_image' %}">Uppdatera</a></button>
-        {% endif %}
-        {% endfor %}
-    </div> 
+        </ul>
+      </div> 
+      {% endfor %}
     </div>
+     
+</section>
+    
     <div class="ref-text">
       <ul class="insta-link">
         <li>

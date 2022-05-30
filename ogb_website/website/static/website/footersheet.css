@@ -8,6 +8,7 @@ footer{
     color: white;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     
 }
@@ -15,6 +16,7 @@ footer{
 footer .footer-container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 
@@ -23,7 +25,7 @@ footer .footer-container .about{
 }
 
 footer .footer-container .about.about-us{
-    width: 80%;
+    width: 40%;
 }
 
 #p-about-us{
@@ -73,7 +75,7 @@ footer .footer-container .about.about-us{
 
 .links{
     position: relative;
-    width: 15%;
+    width: 25%;
 }
 
 .links ul li {
@@ -92,7 +94,9 @@ footer .footer-container .about.about-us{
 }
 
 .contact{
-    margin-right: 0;
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+    
 }
 
 .contact .info{
@@ -148,28 +152,29 @@ footer .footer-container .about.about-us{
 }
 @media only screen and (max-width: 768px){
 
-    .footer-container{
-      font-size: 12px;
-    }
-    footer .footer-container >div{
-        flex-direction: column; 
-    }
-    footer{
-        padding: 40px;
-    }
+   footer{
+       padding: 40px;
+   }
+   footer .footer-container{
+       flex-direction: column;
+   }
 
-    footer .footer-container .about{
-        margin-right: 0;
-        margin-bottom: 40px;
-    }
+   footer .footer-container .about{
+       margin-right: 0;
+       margin-bottom: 40px;
+   }
+   footer .footer-container .about.about-us, .links, .contact{
+       width: 100%;
+       padding-top: 40px;
+   }
 
-    footer .footer-container .about .about.about-us, .links, .contact{
-        width: 100%;
-    } 
+   .copyright{
+       padding: 8px 40px;
+ 
+   }
 
-    .copyright {
-        padding: 5px 30px;
-       
-    }
+ 
+
+    
 
 }

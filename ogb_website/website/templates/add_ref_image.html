@@ -3,12 +3,8 @@
 <h1>Ladda upp referensbild</h1>
 <form method="POST" enctype="multipart/form-data">
      {% csrf_token %}
-  
-     <label>Bifoga bild</label>
-     <input type="file" required name="image">
-     <label>Beskrivning</label><br>
-     <input type="text" required name="description" placeholder="skriv här..">
+     {{form.as_p}}
       <hr>
-     <button class="updates-btn" type="submit">Bekräfta</button>
+     <button type="submit">Bekräfta</button>
      <button><a href="{% url 'references' %}">Avbryt</a></button>
 </form>

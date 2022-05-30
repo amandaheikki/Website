@@ -7,7 +7,7 @@
   
 }
 
-#navbar{
+nav{
     background: white;
     color: black;
     display: flex;
@@ -30,7 +30,7 @@
    
 } 
 
-#navbar a{
+nav a{
     color: black;
     text-decoration: none;
     text-transform: uppercase;
@@ -41,7 +41,7 @@
 
 
 
-#navbar a:hover{
+nav a:hover{
     cursor: pointer;
     color: var(--darkerbrown);
 } 
@@ -73,7 +73,7 @@
     cursor: pointer;
 }
 
-.navbar{
+nav{
     flex-direction: column;
     position: relative;
 }
