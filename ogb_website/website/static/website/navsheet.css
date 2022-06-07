@@ -2,7 +2,7 @@
 /*Css and mediaquieries for global header with navbar*/
 
 .logo{
-    height: 120px;
+    height: 150px;
     padding: 5px 5px;
   
 }
@@ -62,11 +62,11 @@ nav a:hover{
 }
 
 .hamIcon{
-    font-size: 26px;
-    font-weight: 900;
-    margin-left: 27rem;
-    margin-top: -105px;
-    padding-bottom: 60px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .hamIcon:hover{
@@ -90,7 +90,7 @@ nav{
 .nav-list{
     list-style-type: none;
     width: 100%;
-    background-color: var(--blue);
+    background-color: white;
     text-align: center;
     padding-top: 10px;
     display: none;
@@ -99,7 +99,6 @@ nav{
 .nav-list .list-item:hover{
     background-color: #c7cdd45b;
    
- 
 } 
 
 .nav-list .list-item a:hover{
@@ -115,9 +114,13 @@ nav{
 }
 .nav-list .list-item a{
   
-    color: white;
+    color: black;
     
    
+}
+
+.logo{
+    height: 120px;
 }
 
 }

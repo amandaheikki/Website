@@ -18,12 +18,13 @@ def startpage_items(request):
 def startpage_update(request, id):
     obj=get_object_or_404(StartModel, id=id)
     if request.method == "POST":
-        form=updateStartPage(request.POST, instance=obj)
+        form=updateStartPage(request.POST, request.FILES, instance=obj)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect("/")
     else:
-        form=updateStartPage()
+        start_instance = StartModel.objects.get(id=1)   
+        form=updateStartPage(instance=start_instance)
     return render(request, "update.html",{"form":form})    
 
 
@@ -33,6 +34,7 @@ def startpage_content(request):
 
 @login_required
 def startpage_contentupd1(request, id):
+    
     obj=get_object_or_404(StartModel, id=id)
     if request.method == "POST":
         form=updateStartPageContent1(request.POST, request.FILES, instance=obj)
@@ -40,7 +42,9 @@ def startpage_contentupd1(request, id):
             form.save()
             return HttpResponseRedirect("/")
     else:
-        form=updateStartPageContent1()
+       start_instance = StartModel.objects.get(id=1)   
+       form=updateStartPageContent1(instance=start_instance)
+
     return render(request, "updatecontent.html",{"form":form})  
 
 @login_required
@@ -52,7 +56,8 @@ def startpage_contentupd2(request, id):
             form.save()
             return HttpResponseRedirect("/")
     else:
-        form=updateStartPageContent2()
+        start_instance = StartModel.objects.get(id=1)  
+        form=updateStartPageContent2(instance=start_instance)
     return render(request, "updatecontent2.html",{"form":form})  
 
 @login_required
@@ -64,7 +69,8 @@ def startpage_contentupd3(request, id):
             form.save()
             return HttpResponseRedirect("/")
     else:
-        form=updateStartPageContent3()
+        start_instance = StartModel.objects.get(id=1)  
+        form=updateStartPageContent3(instance=start_instance)
     return render(request, "updatecontent3.html",{"form":form}) 
 
 
@@ -84,7 +90,8 @@ def aboutpage_update(request, id):
             form.save()
             return HttpResponseRedirect("/about")
     else:
-        form=updateAboutPage()
+        start_instance = AboutModel.objects.get(id=1)  
+        form=updateAboutPage(instance=start_instance)
     return render(request, "update_about1.html",{"form":form})    
 
 @login_required
@@ -96,7 +103,8 @@ def aboutpage_updateBox1(request, id):
             form.save()
             return HttpResponseRedirect("/about")
     else:
-        form=updateAboutContent1()
+        start_instance = AboutModel.objects.get(id=1) 
+        form=updateAboutContent1(instance=start_instance)
     return render(request, "update_about2.html",{"form":form})   
 
 @login_required
@@ -108,7 +116,8 @@ def aboutpage_updateBox2(request, id):
             form.save()
             return HttpResponseRedirect("/about")
     else:
-        form=updateAboutContent2()
+        start_instance = AboutModel.objects.get(id=1) 
+        form=updateAboutContent2(instance=start_instance)
     return render(request, "update_about3.html",{"form":form})  
 
 # SERVICE
@@ -126,7 +135,8 @@ def update_servicesheading(request, id):
             form.save()
             return HttpResponseRedirect("/services")
     else:
-        form=updateServiceHeading()
+        start_instance = ServiceModel.objects.get(id=1) 
+        form=updateServiceHeading(instance=start_instance)
     return render(request, "update_serviceheading.html",{"form":form})  
 
 @login_required
@@ -138,7 +148,8 @@ def update_servicescontent1(request, id):
             form.save()
             return HttpResponseRedirect("/services")
     else:
-        form=updateServiceContent1()
+        start_instance = ServiceModel.objects.get(id=1) 
+        form=updateServiceContent1(instance=start_instance)
     return render(request, "update_service1.html",{"form":form})  
 
 @login_required
@@ -150,7 +161,8 @@ def update_servicescontent2(request, id):
             form.save()
             return HttpResponseRedirect("/services")
     else:
-        form=updateServiceContent2()
+        start_instance = ServiceModel.objects.get(id=1) 
+        form=updateServiceContent2(instance=start_instance)
     return render(request, "update_service2.html",{"form":form})  
 
 
@@ -169,7 +181,8 @@ def update_estimateheading(request, id):
             form.save()
             return HttpResponseRedirect("/estimate")
     else:
-        form=updateServiceHeading()
+        start_instance = EstimateModel.objects.get(id=1) 
+        form=updateServiceHeading(instance=start_instance)
     return render(request, "update_estimateheading.html",{"form":form})  
 
 #CONTACT
@@ -179,15 +192,18 @@ def contact_items(request):
 
 @login_required
 def update_contactheading(request, id):
-    obj=get_object_or_404(ServiceModel, id=id)
+    obj=get_object_or_404(ContactModel, id=id)
     if request.method == "POST":
         form=updateContactHeading(request.POST, instance=obj)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect("/contact")
     else:
-        form=updateContactHeading()
+        start_instance = ContactModel.objects.get(id=1) 
+        form=updateContactHeading(instance=start_instance)
     return render(request, "update_contactheading.html",{"form":form})  
+
+
 #REFERENCES
 def addRefImage(request):
     add_img=ReferenceModel.objects.all()

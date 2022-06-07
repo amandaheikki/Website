@@ -10,7 +10,7 @@
             <h1 id="h1-heading">Östanbäcks generationsbyggen</h1>
          <h2 id="h2-heading">Kompetens & trygghet i generationer</h2> 
      <div class="button-wrapper">
-         <a href="{% url 'references' %}" type="button" class="reference-button">Se tidigare projekt!</a>
+         <a href="{% url 'references' %}" type="button" class="reference-button1">Se tidigare projekt!</a>
     </div>
     </div>
     </div>
@@ -19,32 +19,22 @@
 <!--Section with quick facts about company-->
 <section>
     <div class="about-container">
+     
     {% for x in obj %}
-    <div>
+    <div class="start">
     <h1>{{x.title}}</h1>
-    </div>
-    <a href="{% url 'index' %}"><img class="main-logo" src="{% static 'images/logo-small.png' %}" alt=""></a>
-    <div>
     <h2>{{x.content}}</h2>
-    </div>
-    <div>
         {% if user.is_authenticated %}
         <button class="updates-btn"><a href="{% url 'update' x.id %}">Uppdatera</a></button>
         {% endif %}
     </div>
+    <div class="end"> 
+     <img class="main-img" src="{{x.start_img}}" alt="">
+    </div>
     {% endfor %}
     </div>
 </section>
-
-<!--Section with companys instagram-feed-->
-<section>
-    <div class="insta-feed">
-        <h1 id="insta-h1">Följ vårt arbete</h1>
-        <div data-behold-id="E1JHsZKAxeEz9OLkfvDI" class="insta-div"></div>
-        <script src="https://widgets.behold.so/ig.js" defer></script>
-    </div>
   
-</section>
 
 <section>
     <div class="space">
@@ -112,29 +102,48 @@
     </div>
 </section>
 
-<!--Section with job-estimate form-->
+
+<section>
+  <div class="insta-feed">
+      <h1 id="insta-h1">Följ oss!</h1>
+      <div data-behold-id="E1JHsZKAxeEz9OLkfvDI" class="insta-div"></div>
+      <script src="https://widgets.behold.so/ig.js" defer></script>
+      <div class="ref-text">
+      <ul class="insta-link">
+        <li>
+        <span><a href="#"><i class="fa fa-instagram" id="fa-insta" aria-hidden="true"></i></a></span><br>
+        <span id="insta-start">För fler bilder följ oss på instagram också!</span> 
+      </li>
+      </ul>
+    </span>
+  </div>
+  </div>
+</section>
+
+  <section>
+    <div class="space">
+    </div>
+</section>
+
 <section>
     <div class="job-estimate">
         <div class="job-form">
-            <!--Funkar när webbsidan ligger på en server!-->
-            <!--https://formsubmit.co/amandaheikki@hotmail.com-->
+         
      <form id="form" action="https://formsubmit.co/amandaheikki@hotmail.com" method="POST"> 
         {% csrf_token %}
         <h1>Kontakta oss inför ditt nästa projekt!</h1>
-        <h2 id="phone"><span><i class="fa fa-phone" aria-hidden="true"></i></span>+46 73 824 91 44<h2> 
+           <h2 class="phone"><span><i class="fa fa-phone" aria-hidden="true"></i></span><a href="tel:+0738249144">+46 73 824 91 44<h2></a>
                 <input type="hidden" name="_captcha" value="false">
                 <input type="text" class="field"  name="name" placeholder="Namn" required>
                 <input type="email" class="field" name="mail" placeholder="Mejladress" required>
                 <input type="text" class="field" name="phone" placeholder="Mobilnummer">
                 <textarea id="message" name="message" placeholder="Meddelande" re></textarea>
-                <!-- <label for="addFile">Bifoga bild</label>
-                <input type="file" id="addFile" name="addFile" multiple> -->
               <input type="submit" value="Skicka" id="submit"> 
     </form>
-       </div>
+    </div>
 
     </div>
-    </section>
+</section>
 
 <section>
     <div class="space">

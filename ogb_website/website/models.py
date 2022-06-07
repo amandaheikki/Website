@@ -13,7 +13,8 @@ class StartModel(models.Model):
     contact = models.TextField()
     about = models.TextField()
     services = models.TextField()
-    about_img = models.ImageField(null=True, blank=True)
+    start_img = models.ImageField(null=True, blank=True, upload_to="images/%y")
+    about_img = models.ImageField(null=True, blank=True, upload_to="images/%y")
     contact_img = models.ImageField(null=True, blank=True, upload_to="images/%y")
     services_img = models.ImageField(null=True, blank=True, upload_to="images/%y")
     def __str__(self):

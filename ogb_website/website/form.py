@@ -8,7 +8,7 @@ from .models import *
 class updateStartPage(forms.ModelForm):
     class Meta:
         model = StartModel
-        fields = ["title", "content"]
+        fields = ["title", "content", "start_img"]
 
 class updateStartPageContent1(forms.ModelForm):
     class Meta:
