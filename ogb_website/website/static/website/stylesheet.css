@@ -11,8 +11,11 @@ html,body {
     overflow-x:hidden;
     background: white;
     color: black;
+    letter-spacing: 2px;
 
 }
+
+
 
 :root{
     /*Color palette*/
@@ -69,6 +72,7 @@ main{
     opacity: 0.8; 
 }
 
+
 .heading-title{
 
    background-color: #3e4f62ab;;
@@ -117,17 +121,17 @@ main{
 }
 
 
-.main-img{
-    height:450px;
-    width: 550px;
-    padding: 10px;
-    border-radius: 2px;
-}
-
 
 .button-wrapper{
 
     display: table;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.button-wrapper2{
+
+   
     margin: 0 auto;
     padding-bottom: 20px;
 }
@@ -196,6 +200,10 @@ main{
     width: 100%;
 }
 
+#form2{
+    width: 100%;
+}
+
 #form a{
     color: black;
 }
@@ -221,45 +229,47 @@ main{
 }
 
 .about-container{
+    width: 100%;
+    padding: 100px 0px;
+    text-align: left;
+     
+}
+
+.about_us{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
-    min-height: 600px;
     align-items: center;
-    padding: 35px;
-    text-align: left;
+    justify-content: space-around;
 }
 
-.about-container > div {
-    
-    justify-content: center;
-    padding: 35px;
+.about_text{
+    width: 550px;
+}
+
+.about_text h2{
+    font-size: 62px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about_text p{
+    font-size: 16px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+
+.main-img{
+    height:auto;
+    width: 430px;
     border-radius: 2px;
-}
-
-.start{
-    margin-left: 3rem;
-}
-.end{
-    margin-right: 3rem;
-}
-
-.about-container h1{
-    font-style: italic;
-    font-weight: 400;
-    font-size: 32px;
-}
-
-.about-container h2{
-  
-    padding-top: 3rem;
-    max-width: 70%;
-    font-weight:400;
-    font-size: 20px;
-
-
- 
 
 }
+
+
 
 
 .insta-feed{
@@ -267,29 +277,47 @@ main{
     flex-direction: column;
     flex-wrap: wrap;  
     align-items: center;
-    min-height: 600px;
+    height: auto;
  
- 
+
+  
 }
+
+.insta-div{
+    padding-top: 30px;
+  
+   
+ }
 
 #insta-start{
     color: white;
     padding-bottom: 40px;
 }
 
-.insta-div{
-    padding: 30px;
-}
 
-
-#insta-h1{
+.insta-feed h1{
     padding: 10px;
     color: black;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.insta-feed h2{
+    padding: 10px;
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
 
 }
 
+.insta-feed a{
+    font-size: 62px;
+    color: black;
+    padding: 30px;
+}
+
+#fa
 #fa-insta{
     padding-bottom: 40px;
     color: white;
@@ -297,15 +325,15 @@ main{
 #fa-insta:hover{
     color: var(--darkerbrown);
 }
+
 .job-estimate{
    
-    background: var(--beige);
+    background: #efefef;
     position: relative;
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 20px 100px;
     height: 600px;
 }
 
@@ -319,6 +347,71 @@ main{
     text-align: center;
     font-size: 36px;
     padding: 20px;
+}
+
+
+.job-estimate2{
+   
+    background: #efefef;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  
+
+  
+}
+
+.job-estimate2 > div{
+    width: 80%;
+}
+.estimate_about{
+    padding: 40px;
+}
+
+.job-estimate2 h1{
+    text-align: center;
+    font-size: 32px;
+}
+
+.job-estimate2 h2{
+    text-align: center;
+    font-size: 36px;
+    padding: 20px;
+}
+
+
+.service-lst{
+
+    margin-top: 10%;
+    margin-left: 43%;
+    text-align: left;
+    color: black;
+
+  
+}
+
+.service-lst li{
+    font-size: 16px;
+    list-style: square;
+    padding: 10px;
+    text-align: left;
+ 
+}
+
+.service-lst a{
+
+    text-decoration: none;
+    color: black;
+ 
+} 
+
+.estimate_about{
+    width: auto;
+   
+}
+
+.service-lst a:hover{
+    color: var(--darkerbrown);
 }
 
 
@@ -342,14 +435,6 @@ main{
     font-size:24px;
 }
  
-
-
-.our_mission{
-    width: 100%;
-    height: 600px;
-    background-color: var(--blue);
-
-}
 
 .field::placeholder{
     font-family: Arial, Helvetica, sans-serif;
@@ -413,7 +498,7 @@ input[type=submit]:hover{
     text-align: center;   
     align-items: center;
     justify-content: center;
-    margin: 0px auto;
+    margin: 0 auto;
     padding-top: 50px;
    
 
@@ -422,7 +507,7 @@ input[type=submit]:hover{
 .ref-gallery ul li{
     list-style-type: none;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
    
 }
 
@@ -490,25 +575,25 @@ input[type=submit]:hover{
 
 
 
+
 .bottom-links{
   
-    padding: 50px;
+    padding: 50px; 
     display: flex;
     flex-direction: row;
-    width: 100%;
     align-items: center;
     justify-content: center;
     column-gap: 40px;
+    background-color: #efefef;
    
 }
 
 .bottom-links > div{
-  
-    background-color: #d4c9b957;
+
     align-items: center;
     text-align: center;
     border-radius: 2px;
-    min-height: 450px;
+    min-height: 450px; 
 
 }
 
@@ -523,7 +608,6 @@ input[type=submit]:hover{
     
       
 }
-
 
 .bottom-images{
     height: 275px;
@@ -542,6 +626,8 @@ input[type=submit]:hover{
 .bottom-p-toplink a:hover{
     text-decoration: underline;
 }
+
+
 .bottom-links > div .bottom-p-link{
     text-align: center;
 
@@ -598,14 +684,14 @@ input[type=submit]:hover{
 
 .contact-form{
     position: relative;
-    background-color: var(--blue);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
     padding: 20px 100px;
     height: 600px;
-    color: white;
+    color: black;
+  
 }
 .contact-form > div{
     width: 30%;
@@ -614,9 +700,7 @@ input[type=submit]:hover{
     gap: 40px;
     display: block;
     padding: 10px;
-    
-
-  
+      
 }
 
 .contact-form h2{
@@ -650,6 +734,7 @@ input[type=submit]:hover{
     flex-direction: column;
     align-items: center;
     text-align: center;
+   
 }
 .aboutus-start h2{
     padding: 30px;
@@ -671,10 +756,8 @@ input[type=submit]:hover{
 
 .container{
     width: 100%;
-    min-height: 1000px;
+    height: auto;
     text-align: center;
- 
-
 }
 
 .aboutus > div{
@@ -685,10 +768,11 @@ input[type=submit]:hover{
 }
 
 .aboutus{
+    width: 100%;
     display: flex;
     flex-direction: row;
     text-align: center;
-    background-color: var(--beige);
+    background-color: #efefef;
 
 }
 
@@ -701,25 +785,9 @@ input[type=submit]:hover{
     padding: 30px;
     max-width: 70%;
     margin: 0px auto;
-   
- 
-
-}
-.service-lst{
-    padding-top: 50px;
-    text-align: center;
-   
-}
-
-.service-lst li{
-    
-    text-decoration: none;
-    list-style:none;
-    text-transform: uppercase;
     text-align: left;
-    margin-left: 40%;
- 
 }
+
 
 
 .fa-check{
@@ -765,6 +833,7 @@ input[type=submit]:hover{
 
 
 .contact-info{
+    
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -794,37 +863,6 @@ input[type=submit]:hover{
 
 }
 
- .info-li{
-    text-decoration: none;
-    list-style-type: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  
-   
-}
-
-.info-li li{
-    padding: 5px;
-    text-align: center;
-}
-
-.info-li a{
-    text-decoration: none;
-    color: white;
-   
-
-} 
-
-.info-li .fa{
- 
-    padding: 10px;
-    font-size: 24px;
-}
-
-.info-li a:hover{
-    color: var(--darkerbrown);
-}
 
 
 
@@ -865,7 +903,7 @@ details>summary {
     margin-left: 1ch;
     display: inline-block;
     transition: 0.9s;
-    content: '\203A'; /* chevron */
+    content: '\203A'; 
     font-weight: 900;
     font-size: 24px;
     
@@ -897,13 +935,21 @@ details>summary {
 
 @media only screen and (max-width: 768px){
 
+      .main-container{
+        height: 300px;
+    } 
+
+    .main-container > div{
+        margin-top: 20px;
+    }
+ 
     .heading-title{
         margin-top:30%;
         text-align: center;
         align-items: center;
     }
     #h1-heading{
-        font-size: 20px;
+        font-size: 32px;
         
     }
     #h2-heading{
@@ -921,13 +967,44 @@ details>summary {
     .button-wrapper{
     
         display: table;
-        margin: 0 auto
+        margin: 0 auto;
+    }
+
+    .button-wrapper2{
+    
+        display: table;
+        margin: 0 auto;
+    }
+
+    .about-container > div{
+
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: o auto;
+       
+    }
+
+    .aboutus-start h3{
+        width: 50%;
+    }
+    .about-container h2{
+        font-size: 36px;
+        padding: 20px;
     }
     .reference-button{
 
-        width: 120px;
-        height: 30px; 
-        font-size: 14px;
+        width: 150px;
+        height: 40px; 
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .reference-button1{
+
+        width: 150px;
+        height: 40px; 
+        font-size: 16px;
         font-weight: 500;
         text-transform: uppercase;
     }
@@ -937,51 +1014,60 @@ details>summary {
        
     }
 
-    .job-estimate p{
-        font-size: 14px;
-        margin-left: 15%;
+
+
+    .aboutus{
+
+        flex-direction:column-reverse;
+     
+    
     }
 
-    
-   /*  .responsive {
-        width: 50%;
-        margin: 6px 0;
-      } */
+ 
+    .about-images{
+        height: 95%;
+        width: auto;
+      
+       
+    }
 
-   
-    .aboutus{
-        flex-direction: column-reverse;
+
+    .contact-info{
+        flex-direction: column;
+
     }
 
     i.fa-phone{
-        font-size: 14px;
+        font-size: 20px;
     }
     .phone{
-    font-size: 14px;
+    font-size: 20px;
     }
 
     .phone2{
         font-size: 14px;
     }
 
-    .about-container{
-        flex-direction: column-reverse;
-    }
 
-    .about-container h1{
-        
-        max-width: 100%;
-        margin: 0px auto;
-       
+
+    .about_text{
+
+        max-width: 350px;
     }
-   
+ 
+ 
     .about-container h2{
       
         max-width: 100%;
         margin: 0px auto;
-       
-    }
-
+        text-align: left;
+        
+    } 
+    .about-container p{
+        text-align: left;
+      
+        
+    } 
     .main-logo{
         display: none;
 
@@ -998,6 +1084,11 @@ details>summary {
     #form{
         width: 450px;
     }
+    #form2{
+        width: 450px;
+        
+    }
+
 
     .bottom-links{
         flex-direction: column;
@@ -1007,10 +1098,37 @@ details>summary {
         margin-top: 3rem;
     }
 
+    input[type=submit]{
+
+        width: 120px;
+        font-size: 16px;
+    }
 
 
+    .space{
+        height: 90px;
+    }
 
+    .space2{
+        height: 90px;
+    }
+ 
+    .job-estimate2{
+        flex-direction: column;
+    
+         
+    } 
+    .service-lst{
+       margin-left: 7rem;
+    }
 
+  .main-img{
+    display: none;
+   
+   /*  width: 80%;
+    padding-bottom: 30px;
+    height: auto; */
+  }
     
 
 
@@ -1018,6 +1136,8 @@ details>summary {
 }
 
 
+
+  
   
 
 

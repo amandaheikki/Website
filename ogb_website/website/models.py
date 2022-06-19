@@ -5,10 +5,12 @@ from django.db import models
 from django.urls import reverse
 
 
+
+
 # Create your models here.
 
 class StartModel(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, verbose_name="")
     content = models.TextField()
     contact = models.TextField()
     about = models.TextField()
@@ -59,8 +61,8 @@ class ContactModel(models.Model):
         return self.title
 
 class ReferenceModel(models.Model):
-    caption = models.CharField(max_length=200)
-    image = models.ImageField(upload_to="images/%y")
+    caption = models.CharField(max_length=200, null=True)
+    image = models.ImageField(upload_to="images/%y", null=True)
     def __str__(self):
         return self.caption
 

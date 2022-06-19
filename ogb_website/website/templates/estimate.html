@@ -29,30 +29,28 @@
         </div>
     </section>
 
-  <!--Section with job-estimate form-->
-<section>
-
+    <section>
         <div class="job-estimate">
             <div class="job-form">
              
          <form id="form" action="https://formsubmit.co/amandaheikki@hotmail.com" method="POST"> 
             {% csrf_token %}
-            <h1>Kontakta oss inför ditt nästa projekt!</h1>
+            <h1>Lämna offertförfrågan</h1>
                <h2 class="phone"><span><i class="fa fa-phone" aria-hidden="true"></i></span><a href="tel:+0738249144">+46 73 824 91 44<h2></a>
                     <input type="hidden" name="_captcha" value="false">
                     <input type="text" class="field"  name="name" placeholder="Namn" required>
                     <input type="email" class="field" name="mail" placeholder="Mejladress" required>
                     <input type="text" class="field" name="phone" placeholder="Mobilnummer">
                     <textarea id="message" name="message" placeholder="Meddelande" re></textarea>
-                    <input type="file" id="file" class="files" multiple/>
-                    <label for="file"></label>
+                 <input type="file" id="file" class="files" multiple/>
+                    <label for="file"></label> 
                   <input type="submit" value="Skicka" id="submit"> 
         </form>
         </div>
     
         </div>
+    </section>
 
-</section>
 <section>
     <div class="space2">
     </div>

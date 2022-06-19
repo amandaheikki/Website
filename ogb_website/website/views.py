@@ -182,7 +182,7 @@ def update_estimateheading(request, id):
             return HttpResponseRedirect("/estimate")
     else:
         start_instance = EstimateModel.objects.get(id=1) 
-        form=updateServiceHeading(instance=start_instance)
+        form=updateEstimateHeading(instance=start_instance)
     return render(request, "update_estimateheading.html",{"form":form})  
 
 #CONTACT
@@ -207,9 +207,9 @@ def update_contactheading(request, id):
 #REFERENCES
 def addRefImage(request):
     add_img=ReferenceModel.objects.all()
-    return render(request,"references.html",{"add_img":add_img})
+    return render(request,"references.html",{"add_img":add_img}) 
 
-
+ 
 
 def about(request):
     return render(request, 'about.html', {})

@@ -12,25 +12,32 @@
      <div class="button-wrapper">
          <a href="{% url 'references' %}" type="button" class="reference-button1">Se tidigare projekt!</a>
     </div>
+    
     </div>
     </div>
 </section>
 
-<!--Section with quick facts about company-->
+
 <section>
     <div class="about-container">
-     
+  
     {% for x in obj %}
-    <div class="start">
-    <h1>{{x.title}}</h1>
-    <h2>{{x.content}}</h2>
-        {% if user.is_authenticated %}
-        <button class="updates-btn"><a href="{% url 'update' x.id %}">Uppdatera</a></button>
-        {% endif %}
-    </div>
-    <div class="end"> 
-     <img class="main-img" src="{{x.start_img}}" alt="">
-    </div>
+    <div class="about_us"> 
+      <img class="main-img" src="{{x.start_img}}" alt="">
+      <div class="about_text">
+
+        <h2>{{x.title}}</h2>
+        <p>{{x.content}}</P>
+          <div class="button-wrapper2">
+            <a href="{% url 'about' %}" type="button" class="reference-button1">Läs mer om oss</a>
+        </div>
+            {% if user.is_authenticated %}
+            <button class="updates-btn"><a href="{% url 'update' x.id %}">Uppdatera</a></button>
+            {% endif %}
+        </div>
+     </div>
+  
+  
     {% endfor %}
     </div>
 </section>
@@ -42,7 +49,6 @@
 </section>
 
 <section>
-
   <div class="bottom-links">
     {% for y in obj %}
       <div>
@@ -93,37 +99,29 @@
       </div>
       {% endfor %}
 </div>
-  
-  </section>
-
-
-<section>
-    <div class="space">
-    </div>
 </section>
 
-
-<section>
+ <section>
   <div class="insta-feed">
-      <h1 id="insta-h1">Följ oss!</h1>
-      <div data-behold-id="E1JHsZKAxeEz9OLkfvDI" class="insta-div"></div>
-      <script src="https://widgets.behold.so/ig.js" defer></script>
-      <div class="ref-text">
+ <div class="ref-text">
       <ul class="insta-link">
         <li>
-        <span><a href="#"><i class="fa fa-instagram" id="fa-insta" aria-hidden="true"></i></a></span><br>
-        <span id="insta-start">För fler bilder följ oss på instagram också!</span> 
+        <span><a href="#"><i class="fa fa-instagram" id="fa-insta" aria-hidden="true"></i></a></span>
       </li>
       </ul>
     </span>
-  </div>
+  </div> 
+      <h1>FÖLJ OSS</h1>
+      <h2>Häng med på vad vi gör om dagarna!</h2>
+        <!--  <div data-behold-id="E1JHsZKAxeEz9OLkfvDI" class="insta-div"></div>
+        <script src="https://w.behold.so/widget.js" type="module"></script> --> 
   </div>
 </section>
 
-  <section>
-    <div class="space">
-    </div>
-</section>
+<section>
+  <div class="space2">
+  </div>
+</section> 
 
 <section>
     <div class="job-estimate">
