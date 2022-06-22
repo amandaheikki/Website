@@ -889,6 +889,18 @@ input[type=submit]:hover{
 
 }
 
+.add_image{
+    margin: 0 auto;
+    text-align: center;
+   
+
+}
+.add_image .updates-btn-about{
+   
+    width: 150px;
+    padding: 10px;
+    height: auto;
+}
 
 
 @media only screen and (max-width: 1024px){

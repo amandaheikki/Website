@@ -150,7 +150,7 @@ footer .footer-container .about.about-us{
 #login:hover{
     text-decoration: underline;
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1024px){
 
    footer{
        padding: 40px;
@@ -172,9 +172,4 @@ footer .footer-container .about.about-us{
        padding: 8px 40px;
  
    }
-
- 
-
-    
-
 }

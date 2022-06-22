@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import startpage_items, startpage_update, startpage_contentupd1, startpage_contentupd2, startpage_contentupd3, startpage_content, aboutpage_items, aboutpage_update, aboutpage_updateBox1, aboutpage_updateBox2, update_servicesheading, services_items, update_servicescontent1, update_servicescontent2, update_estimateheading, estimate_items, contact_items, update_contactheading, DisplayImages, add_image_view
+from .views import startpage_items, startpage_update, startpage_contentupd1, startpage_contentupd2, startpage_contentupd3, startpage_content, aboutpage_items, aboutpage_update, aboutpage_updateBox1, aboutpage_updateBox2, update_servicesheading, services_items, update_servicescontent1, update_servicescontent2, update_estimateheading, estimate_items, contact_items, update_contactheading, displayImages, add_image, delete_image
 
 urlpatterns = [
     path('', startpage_items, name="index"),
@@ -21,8 +21,9 @@ urlpatterns = [
     path('<id>/update_estimateheading', update_estimateheading, name="update_estimateheading"),
     path('contact', contact_items, name="contact"),
     path('<id>/update_contactheading', update_contactheading, name="update_contactheading"),
-    path('references', DisplayImages, name="references"),
-    path('upload_images', add_image_view, name="upload_images"),
+    path('references', displayImages, name="references"),
+    path('upload_images', add_image, name="upload_images"),
+    path('/<int:pk>', delete_image, name="delete_image"),
     path('about', views.about, name='about'),
     path('references', views.references, name='references'),
     path('contact', views.contact, name='contact'),

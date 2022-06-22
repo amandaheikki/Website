@@ -208,7 +208,7 @@ def update_contactheading(request, id):
 
 #REFERENCES
 @login_required
-def add_image_view(request):
+def add_image(request):
     if request.method == "POST":
         form = addImages(data=request.POST, files=request.FILES)
           
@@ -220,10 +220,16 @@ def add_image_view(request):
 
     return render(request, "upload_images.html", {"form": form})
 
-def DisplayImages(request):
+def displayImages(request):
     if request.method == "GET":
         img = ReferenceModel.objects.all()
         return render(request, "references.html", {"ref_img":img})
+@login_required
+def delete_image(request, pk):
+    if request.method == "POST":
+        img = ReferenceModel.objects.get(pk=pk)
+        img.delete()
+        return HttpResponseRedirect("/references")
 
 
 def about(request):

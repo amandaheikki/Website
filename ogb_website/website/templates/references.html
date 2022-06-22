@@ -25,20 +25,30 @@
         <ul>
           <li><img src="{{images.image.url}}" alt="" class="ref-images"></li>
           <li>{{images.caption}}</li>
+          <li>
+            {% if user.is_authenticated %}
+            <form method="post" action="{% url 'delete_image' images.pk %}">
+              {% csrf_token %}
+              <button class="updates-btn-about" type="submit">Radera bild</button>
+              {% endif %}
+            </form>
+          </li>
+      
         </ul>
     
       </div> 
   
       {% endfor %}
-      <div>
-        {% if user.is_authenticated %}
-        <button class="updates-btn-about"><a href="{% url 'upload_images' %}">Ladda upp ny bild</a></button>
-        {% endif %}
-    </div> 
     </div>
+</section>
+<div>
+  <div class="add_image">
+    {% if user.is_authenticated %}
+    <button class="updates-btn-about"><a href="{% url 'upload_images' %}">Ladda upp ny bild</a></button>
+    {% endif %}
+</div> 
+</div>
 
-
- 
 <section>
     <div class="ref-text">
       <ul class="insta-link">
