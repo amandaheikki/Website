@@ -5,6 +5,7 @@
 <main>
     <section>
         <div class="links-header">
+            <hr>
         </div>
     </section>
     
@@ -73,11 +74,9 @@
     <section>
         <div class="job-estimate">
             <div class="job-form">
-                <!--Funkar när webbsidan ligger på en server!-->
-                <!--https://formsubmit.co/amandaheikki@hotmail.com-->
          <form id="form" action="https://formsubmit.co/amandaheikki@hotmail.com" method="POST"> 
             {% csrf_token %}
-            <h1>Kontakta oss inför ditt nästa projekt!</h1>
+            <h1>Kontakta oss!</h1>
             <h2 class="phone"><span><i class="fa fa-phone" aria-hidden="true"></i></span><a href="tel:+0738249144">+46 73 824 91 44<h2></a>
                     <input type="hidden" name="_captcha" value="false">
                     <input type="text" class="field"  name="name" placeholder="Namn" required>

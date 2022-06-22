@@ -1,6 +1,7 @@
+from multiprocessing import context
 from django.shortcuts import get_object_or_404, redirect, render, HttpResponseRedirect
 from .models import StartModel, EstimateModel, ContactModel, AboutModel, ServiceModel, ReferenceModel
-from .form import updateStartPage, updateStartPageContent1, updateStartPageContent2, updateStartPageContent3, updateAboutPage, updateAboutContent1, updateAboutContent2, updateServiceHeading, updateServiceContent1, updateServiceContent2, updateEstimateHeading
+from .form import updateStartPage, updateStartPageContent1, updateStartPageContent2, updateStartPageContent3, updateAboutPage, updateAboutContent1, updateAboutContent2, updateServiceHeading, updateServiceContent1, updateServiceContent2, updateEstimateHeading, addImages
 from django.contrib.auth.decorators import login_required
 from .form import *
 from django.contrib import messages
@@ -205,11 +206,7 @@ def update_contactheading(request, id):
 
 
 #REFERENCES
-def addRefImage(request):
-    add_img=ReferenceModel.objects.all()
-    return render(request,"references.html",{"add_img":add_img}) 
 
- 
 
 def about(request):
     return render(request, 'about.html', {})
@@ -219,9 +216,6 @@ def references(request):
 
 def contact(request):
     return render(request, 'contact.html', {})
-
-def faq(request):
-    return render(request, 'faq.html', {})
 
 def services(request):
     return render(request, 'services.html', {})    

@@ -23,6 +23,7 @@ html,body {
     --darkerbrown: #af5034; /*Red-orange*/
     --blue: #3E4F62; /*Police blue*/
     --beige: #d4c9b9; /*Almond*/
+    --grey: #efefef; 
  
 
     /*Fonts*/
@@ -33,16 +34,7 @@ html,body {
  
 }
 
-/* body{
 
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; 
-    min-height: 100vh;
-    flex-direction: column;  
-    background: white; 
-    
-} */
 
 main{
     width: 100%;
@@ -58,9 +50,6 @@ main{
     flex-direction: column;
     background:url("/static/images/wood.jpg");   
     background-position: right;
-  /*  -webkit-filter: contrast(120%); 
-    filter: contrast(120%); */
-   /*  opacity: 0.8;  */
     height: 600px;
     align-items: center;
    
@@ -200,9 +189,7 @@ main{
     width: 100%;
 }
 
-#form2{
-    width: 100%;
-}
+
 
 #form a{
     color: black;
@@ -328,7 +315,7 @@ main{
 
 .job-estimate{
    
-    background: #efefef;
+    background: var(--grey);
     position: relative;
     display: flex;
     justify-content: center;
@@ -347,71 +334,6 @@ main{
     text-align: center;
     font-size: 36px;
     padding: 20px;
-}
-
-
-.job-estimate2{
-   
-    background: #efefef;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  
-
-  
-}
-
-.job-estimate2 > div{
-    width: 80%;
-}
-.estimate_about{
-    padding: 40px;
-}
-
-.job-estimate2 h1{
-    text-align: center;
-    font-size: 32px;
-}
-
-.job-estimate2 h2{
-    text-align: center;
-    font-size: 36px;
-    padding: 20px;
-}
-
-
-.service-lst{
-
-    margin-top: 10%;
-    margin-left: 43%;
-    text-align: left;
-    color: black;
-
-  
-}
-
-.service-lst li{
-    font-size: 16px;
-    list-style: square;
-    padding: 10px;
-    text-align: left;
- 
-}
-
-.service-lst a{
-
-    text-decoration: none;
-    color: black;
- 
-} 
-
-.estimate_about{
-    width: auto;
-   
-}
-
-.service-lst a:hover{
-    color: var(--darkerbrown);
 }
 
 
@@ -524,9 +446,7 @@ input[type=submit]:hover{
     width: 400px;
     border-radius: 2px;
 }
-.ref-images:hover{
-    opacity: 0.7;
-}
+
 
 .ref-text{
     text-align: center;
@@ -584,7 +504,7 @@ input[type=submit]:hover{
     align-items: center;
     justify-content: center;
     column-gap: 40px;
-    background-color: #efefef;
+    background-color: var(--grey);
    
 }
 
@@ -653,7 +573,7 @@ input[type=submit]:hover{
     display: flex;
     flex-direction: row;
     background:url("/static/images/header.jpg");   
-    background-position:right; 
+    background-position: center;
     opacity: 0.8; 
     height: 200px;
     align-items: center;
@@ -679,6 +599,12 @@ input[type=submit]:hover{
     text-shadow: 2px 2px black;
  
   
+}
+
+.links-header hr{
+    display: none;
+    color: black;
+    width: 90%;
 }
 
 
@@ -747,7 +673,6 @@ input[type=submit]:hover{
 
 .aboutus-start h3{
     padding: 10px;
-    max-width: 40%;
     font-weight:400;
 }
 
@@ -772,7 +697,7 @@ input[type=submit]:hover{
     display: flex;
     flex-direction: row;
     text-align: center;
-    background-color: #efefef;
+    background-color: var(--grey);
 
 }
 
@@ -865,75 +790,108 @@ input[type=submit]:hover{
 
 
 
+.contact-container{
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--grey);
+  
 
-.faq-container{
+}
+
+.contact-container h1{
+    padding: 40px;
+
+}
+
+.containers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.contact-container .contact-inf{
+
     width: 50%;
-    margin: 100px auto;
-    border-radius: 3px;
-    box-shadow: 1px 2px 4px rgba(0,0,0,.3);
-    min-height: auto;
+    display: flex;
+    flex-direction: column;
+  
+
+
+}
+.contact-container .contact-inf .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+
+}
+.contact-container .contact-inf .box .icon{
+    color: var(--darkerbrown);
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 32px;
 }
 
-.faq-container > div{
+.contact-container .contact-inf .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+    flex-direction: column;
+  
 
-    text-align: center;
+}
+
+.contact-container .contact-inf .box .text h3{
+  
+    padding-bottom: 5px;
+
+
 }
 
 
 
-
-details>summary {
-    list-style-type: none;
-    outline: none;
-    cursor: pointer;
-    border: 1px solid #eee;
-    padding: 15px;
-    border-radius: 5px;
-  
-  }
-
-  
-  summary {
-    display: block;
-    text-transform: uppercase;
+.contact-container .contact-inf .box .text a{
+    text-decoration: none;
+    color: black;
    
-  }
-  
-  summary::after {
-    margin-left: 1ch;
-    display: inline-block;
-    transition: 0.9s;
-    content: '\203A'; 
-    font-weight: 900;
-    font-size: 24px;
     
-  }
+}
+.contact-container .contact-inf .box .text a:hover{
+    color: var(--brown);
+}
 
-  details[open]{
-      min-height: auto;
-  }
 
-  details[open] summary::after {
-    transform: rotate(90deg);
+.contactform{
     
-  }
+    width: auto;
+    padding: 40px;
+    background-color: white;
+    margin-right: 50px;
+    border-radius: 4px;
+}
 
-  details[open] summary ~ * {
-    animation: sweep .5s ease-in-out;
-  }
-
+.contactform form{
+ 
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   
-  @keyframes sweep {
-    0%    {opacity: 0; transform: translateX(-10px)}
-    100%  {opacity: 1; transform: translateX(0)}
-  }
-
-
-@media only screen and (max-width: 481px){
 
 }
 
-@media only screen and (max-width: 768px){
+
+
+@media only screen and (max-width: 1024px){
 
       .main-container{
         height: 300px;
@@ -942,6 +900,25 @@ details>summary {
     .main-container > div{
         margin-top: 20px;
     }
+
+     .links-header{
+       background: white;
+       color:black;
+       text-decoration: overline;
+       height: 50px;
+
+    } 
+
+    .links-header hr{
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: block;
+        color: black;
+        width: 90%;
+        border: 1px solid black;
+     
+    }
  
     .heading-title{
         margin-top:30%;
@@ -949,7 +926,7 @@ details>summary {
         align-items: center;
     }
     #h1-heading{
-        font-size: 32px;
+        font-size: 28px;
         
     }
     #h2-heading{
@@ -985,9 +962,13 @@ details>summary {
        
     }
 
-    .aboutus-start h3{
-        width: 50%;
+    .aboutus-start h2{
+        width: 100%;
     }
+    .aboutus-start h2{
+        width: 100%;
+    }
+
     .about-container h2{
         font-size: 36px;
         padding: 20px;
@@ -1054,12 +1035,11 @@ details>summary {
 
         max-width: 350px;
     }
- 
+
  
     .about-container h2{
       
         max-width: 100%;
-        margin: 0px auto;
         text-align: left;
         
     } 
@@ -1084,10 +1064,7 @@ details>summary {
     #form{
         width: 450px;
     }
-    #form2{
-        width: 450px;
-        
-    }
+ 
 
 
     .bottom-links{
@@ -1113,30 +1090,67 @@ details>summary {
         height: 90px;
     }
  
-    .job-estimate2{
-        flex-direction: column;
-    
-         
-    } 
-    .service-lst{
-       margin-left: 7rem;
-    }
+
 
   .main-img{
     display: none;
-   
-   /*  width: 80%;
-    padding-bottom: 30px;
-    height: auto; */
-  }
-    
 
+  }
+
+
+.contact-container{
+    min-height: 900px;
+    flex-direction: column;
+    padding-bottom: 60px;
+  
+}
+.contact-inf {
+ 
+    margin: 0 auto; 
+    padding: 40px;
+    width: 100%;
+
+
+}
+ 
+
+.contactform{
+    width: auto;
+    margin: 0 auto;
+
+}
 
 
 }
 
 
 
+@media only screen and (max-width: 600px){
+ 
+    .contact-inf {
+ 
+        margin: 0 auto; 
+        padding: 2.5px 0px;
+        padding-bottom: 40px;
+        width: 100%;
+    
+    }
+
+    .contact-container h1{
+        padding: 0px;
+        padding-bottom: 20px;
+        width: 100%;
+    
+    }
+    .contact-container .contact-inf .box {
+        padding-bottom: 10px;
+    }
+    .contact-container .contact-inf .box .icon{
+        font-size: 24px;
+    }
+  
+
+}
   
   
 

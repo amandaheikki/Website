@@ -7,10 +7,3 @@ from .models import *
 
 myModels = [StartModel, AboutModel, ServiceModel, EstimateModel, ContactModel, ReferenceModel]
 admin.site.register(myModels)
-
-
-
-#from .models import StartInfo, FooterAbout
-#admin.site.register(StartInfo)
-#admin.site.register(FooterAbout)
-

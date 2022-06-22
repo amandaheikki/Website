@@ -49,8 +49,7 @@ nav a:hover{
 
 
 
-
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1024px){
 
 
 .nav-list{
@@ -97,7 +96,7 @@ nav{
     text-align: center;
     padding-top: 10px;
     display: none;
-    font-size: 24px;
+    font-size: 36px;
 }
 
 .nav-list .list-item:hover{
@@ -117,7 +116,7 @@ nav{
    
 }
 .nav-list .list-item a{
-  
+    font-size: 24px;
     color: black;
     
    
@@ -129,7 +128,7 @@ nav{
 
 }
 
-@media only screen and (min-width: 769px){
+@media only screen and (min-width: 1025px){
     .hamIcon{
         display: none;
     }

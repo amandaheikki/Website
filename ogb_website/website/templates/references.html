@@ -5,7 +5,7 @@
 <main>
   <section>
     <div class="links-header">
-      
+      <hr>
     </div>
 </section>
 
@@ -18,31 +18,42 @@
 </section>
 
 
-<section>
+<!-- <section>
   <div class="ref-gallery">
-    {% for x in add_img %}
+    {% for i in img %}
       <div class="box">
        
         <ul>
-          <li><img src="{{ x.image.url }}" alt="" class="ref-images"></li>
-          <li>{{ x.caption }}</li>
-          {% if user.is_authenticated %}
-          <li><button class="updates-btn">Uppdatera</button></li>
-          {% endif %}
+          <li><img src="{{i.image.url}}" alt="" class="ref-images"></li>
+          <li>{{i.caption}}</li>
         </ul>
-      </div> 
-      {% endfor %}
- 
-    </div>
      
-</section>
+      </div> 
+     
+    </div>
+    {% endfor %}
+    <div>
+    {% if user.is_authenticated %}
+    <h1>Ladda upp referensbild</h1>
+<form method="POST" enctype="multipart/form-data">
+     {% csrf_token %}
+     {{form.as_p}}
+      <hr>
+     <button type="submit">Bekräfta</button>
+     <button><a href="{% url 'references' %}">Avbryt</a></button>
+</form>
+</div>
+
+     {% endif %} 
+ 
+</section> -->
  
 <section>
     <div class="ref-text">
       <ul class="insta-link">
         <li>
         <span><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></span><br>
-        <span>För fler bilder följ oss på instagram också!</span> 
+        <span>Följ oss på instagram också!</span> 
       </li>
       </ul>
     </span>

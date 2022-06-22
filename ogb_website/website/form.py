@@ -1,4 +1,5 @@
 from dataclasses import fields
+from pyexpat import model
 from weakref import ref
 from django import forms
 from .models import StartModel, AboutModel, ServiceModel, EstimateModel, ReferenceModel
@@ -73,4 +74,7 @@ class updateContactHeading(forms.ModelForm):
         fields = ["title", "content"]
 
 #REFERENCES
-
+class addImages(forms.ModelForm):
+    class Meta:
+        model = ReferenceModel
+        fields = ["caption", "image"]
