@@ -3,27 +3,19 @@
 
 {% block content %}
 <main>
-  <section>
-    <div class="links-header">
-      <hr>
-    </div>
-</section>
+<div class="links-header"><hr></div>
 
-<section>
-  <div class="aboutus-start">
+<div class="aboutus-start">
       <h2>REFERENSER</h2>
 
-  </div>
+</div>
 
-</section>
-
-<section>
-  <div class="ref-gallery">
+<div class="ref-gallery">
     {% for images in ref_img %}
       <div class="box">
        
         <ul>
-          <li><img src="{{images.image.url}}" alt="" class="ref-images"></li>
+          <li><img src="{{images.image.url}}" alt="Bild på tidigare genomfört projekt av Östanbäcks generationsbyggen" class="ref-images"></li>
           <li>{{images.caption}}</li>
           <li>
             {% if user.is_authenticated %}
@@ -40,7 +32,7 @@
   
       {% endfor %}
     </div>
-</section>
+
 <div>
   <div class="add_image">
     {% if user.is_authenticated %}
@@ -49,23 +41,18 @@
 </div> 
 </div>
 
-<section>
-    <div class="ref-text">
+<div class="ref-text">
       <ul class="insta-link">
         <li>
         <span><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></span><br>
         <span>Följ oss på instagram också!</span> 
       </li>
       </ul>
-    </span>
-    </div>
-  </section>
+   
+</div>
 
+<div class="space2"></div>
 
-  <section>
-    <div class="space2">
-    </div>
-</section>
 
 </main>
 

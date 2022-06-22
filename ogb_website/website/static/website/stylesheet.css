@@ -1,4 +1,4 @@
-/*Global css*/
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -25,13 +25,10 @@ html,body {
     --beige: #d4c9b9; /*Almond*/
     --grey: #efefef; 
  
-
     /*Fonts*/
-  /*   font-family: 'Poppins', sans-serif;   */
-    font-family: 'Raleway', sans-serif; 
- /*   font-family: 'Maven Pro', sans-serif; */
 
- 
+    font-family: 'Raleway', sans-serif; 
+
 }
 
 
@@ -42,7 +39,6 @@ main{
    
 } 
 
-/*All css for index.html main*/
 .main-container{
 
     width: 100%;
@@ -970,7 +966,7 @@ input[type=submit]:hover{
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin: o auto;
+        margin: 0 auto;
        
     }
 

@@ -4,14 +4,8 @@
 {% block content %}
 <main>
 
-    <section>
-        <div class="links-header">
-            <hr>
-        </div>
-    </section>
-
-    <section>
-        <div class="aboutus-start">
+<div class="links-header"><hr></div>
+<div class="aboutus-start">
             {% for x in obj %}
             <h2>{{x.title}}</h2><br>
             <h3>{{x.content}}</h3>
@@ -22,15 +16,9 @@
             {% endif %}
         </div> 
         {% endfor %}
-    </section>
-<section>
-    <div class="space2">
-    </div>
-</section>
 
-<section>
-    
-    <div class="contact-container">
+<div class="space2"></div>
+<div class="contact-container">
         <div class="containers">
         <div class="contact-inf">
             <h1>Hitta till oss</h1>
@@ -64,7 +52,7 @@
         </div>
         </div>
         <div class="contactform">
-            <form action="https://formsubmit.co/amandaheikki@hotmail.com" method="POST"> 
+            <form action="https://formsubmit.co/rickard@zbyggstyrning.se" method="POST"> 
                 {% csrf_token %}
                 <h1>Skicka meddelande</h1>
 
@@ -72,19 +60,17 @@
                         <input type="text" class="field"  name="name" placeholder="Namn" required>
                         <input type="email" class="field" name="mail" placeholder="Mejladress" required>
                         <input type="text" class="field" name="phone" placeholder="Mobilnummer">
-                        <textarea id="message" name="message" placeholder="Meddelande" re></textarea>
+                        <textarea id="message" name="message" placeholder="Meddelande"></textarea>
                       <input type="submit" value="Skicka" id="submit"> 
             </form>
         </div>
 
     </div>
-</section>
 
 
-<section>
-    <div class="space2">
-    </div>
-</section>
+
+<div class="space2"></div>
+
 </main>
 
 {% endblock content %}
