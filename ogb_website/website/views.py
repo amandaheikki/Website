@@ -1,3 +1,4 @@
+from http.client import HTTPResponse
 from multiprocessing import context
 from django.shortcuts import get_object_or_404, redirect, render, HttpResponseRedirect
 from .models import StartModel, EstimateModel, ContactModel, AboutModel, ServiceModel, ReferenceModel
@@ -206,6 +207,23 @@ def update_contactheading(request, id):
 
 
 #REFERENCES
+@login_required
+def add_image_view(request):
+    if request.method == "POST":
+        form = addImages(data=request.POST, files=request.FILES)
+          
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/references")
+    else:
+        form = addImages()
+
+    return render(request, "upload_images.html", {"form": form})
+
+def DisplayImages(request):
+    if request.method == "GET":
+        img = ReferenceModel.objects.all()
+        return render(request, "references.html", {"ref_img":img})
 
 
 def about(request):

@@ -17,36 +17,27 @@
 
 </section>
 
-
-<!-- <section>
+<section>
   <div class="ref-gallery">
-    {% for i in img %}
+    {% for images in ref_img %}
       <div class="box">
        
         <ul>
-          <li><img src="{{i.image.url}}" alt="" class="ref-images"></li>
-          <li>{{i.caption}}</li>
+          <li><img src="{{images.image.url}}" alt="" class="ref-images"></li>
+          <li>{{images.caption}}</li>
         </ul>
-     
+    
       </div> 
-     
+  
+      {% endfor %}
+      <div>
+        {% if user.is_authenticated %}
+        <button class="updates-btn-about"><a href="{% url 'upload_images' %}">Ladda upp ny bild</a></button>
+        {% endif %}
+    </div> 
     </div>
-    {% endfor %}
-    <div>
-    {% if user.is_authenticated %}
-    <h1>Ladda upp referensbild</h1>
-<form method="POST" enctype="multipart/form-data">
-     {% csrf_token %}
-     {{form.as_p}}
-      <hr>
-     <button type="submit">Bekräfta</button>
-     <button><a href="{% url 'references' %}">Avbryt</a></button>
-</form>
-</div>
 
-     {% endif %} 
- 
-</section> -->
+
  
 <section>
     <div class="ref-text">

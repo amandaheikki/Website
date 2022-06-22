@@ -3,8 +3,8 @@
 <h1>Uppdatera startsida</h1>
 <form method="post" enctype="multipart/form-data">
      {% csrf_token %}
-     {{form.as_p}}
+     {{form.form.as_p}}
       <hr>
-     <button class="updates-btn" type="submit">Bekräfta ändringar</button>
+     <input class="updates-btn" type="submit">Bekräfta ändringar</button>
      <button><a href="{% url 'index' %}">Avbryt</a></button>
 </form>
